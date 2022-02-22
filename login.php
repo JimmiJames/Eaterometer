@@ -3,12 +3,12 @@ if(isset($_GET['login_button_name']))
 {
 $server = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 
 $con = mysqli_connect($server,$username,$password);
 
 if (!$con) {
-    die("Connection to this database failed dut to".mysqli_connect_error());
+    die("Connection to this database failed due to ".mysqli_connect_error());
 }
 
 $email = $_GET['Email'];
