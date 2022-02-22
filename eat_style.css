@@ -177,6 +177,7 @@ section p{
     border-style: solid;
     border-color: aliceblue;
     z-index: 1;
+    visibility: hidden;
 }
 
 
@@ -254,6 +255,7 @@ section p{
 
 #signup_form_student_id{
   position: relative;
+  visibility: hidden;
   bottom: 1550px;
   left: 138px;
   background-color: white;

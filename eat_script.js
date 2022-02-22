@@ -13,21 +13,21 @@ let login_inputs = window.document.getElementsByClassName("names");
 let signup_student_form = window.document.getElementById("signup_form_student_id");
 //let signup_vendor_form = window.document.getElementById("signup_form_vendor_id");
 
-login_form.style.opacity = 0;
+login_form.style.visibility = 0;
 //signup_link_options.style.opacity = 0;
-signup_student_form.style.opacity = 0;
+signup_student_form.style.visibility = 0;
 // signup_vendor_form.style.opacity = 0;
 
 
 login_link.addEventListener("click", function () {
 
-    if (login_form.style.opacity == 100) {
-        login_form.style.opacity = 0;
+    if (login_form.style.visibility == "visible") {
+        login_form.style.visibility = "hidden";
     }
 
     else {
         
-        login_form.style.opacity = 100;
+        login_form.style.visibility = "visible";
         
         login_form.style.zIndex=2;
         home_section.style.zIndex=-1;
@@ -38,7 +38,7 @@ login_link.addEventListener("click", function () {
         //about_section.style.filter="brightness(30%)";
         // signup_link_options.style.opacity = 0;
         // signup_link_options.style.zIndex=0;
-        signup_student_form.style.opacity = 0;
+        signup_student_form.style.visibility = "hidden";
         signup_student_form.style.zIndex=0;
         // signup_vendor_form.style.opacity = 0;
         // signup_vendor_form.style.zIndex=0;
@@ -47,13 +47,13 @@ login_link.addEventListener("click", function () {
 
 signup_link.addEventListener("click", function () {
 
-    if (signup_student_form.style.opacity == 100) {
-        signup_student_form.style.opacity = 0;
+    if (signup_student_form.style.visibility == "visible") {
+        signup_student_form.style.visibility = "hidden";
     }
 
     else {
         
-        signup_student_form.style.opacity = 100;
+        signup_student_form.style.visibility = "visible";
         
         signup_student_form.style.zIndex=2;
         home_section.style.zIndex=-1;
@@ -64,7 +64,7 @@ signup_link.addEventListener("click", function () {
         //about_section.style.filter="brightness(30%)";
         // signup_link_options.style.opacity = 0;
         // signup_link_options.style.zIndex=0;
-        login_form.style.opacity = 0;
+        login_form.style.visibility = "hidden";
         login_form.style.zIndex=0;
         // signup_vendor_form.style.opacity = 0;
         // signup_vendor_form.style.zIndex=0;
