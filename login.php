@@ -1,31 +1,92 @@
 <?php
-if(isset($_GET['login_button_name']))
-{
-$server = "localhost";
-$username = "root";
-$password = "root";
+  $db_host = 'localhost';
+  $db_user = 'root';
+  $db_password = 'root';
+  $db_db = 'eaterometer';
+ 
+  $conn = mysqli_connect($db_host, $db_user, $db_password, $db_db);
 
-$con = mysqli_connect($server,$username,$password);
+if (!$conn) {
 
-if (!$con) {
-    die("Connection to this database failed due to ".mysqli_connect_error());
+    echo "Connection failed!";
 }
 
-$email = $_GET['Email'];
-$password = $_GET['Password'];
+?>
 
-$sql = "INSERT INTO `eaterometer`.`customer_login` (`Email`,`Password`) VALUES ('$email','$password');";
-echo $sql;
-if ($con->query($sql)==true) {
-   echo "Successfully inserted";
-}
+<?php 
 
-else
-{
-    echo "Error:";
-}
+// include "db_conn.php";
 
-$con->close();
+if (isset($_POST['Email']) && isset($_POST['Password'])) {
+
+    function validate($data){
+
+       $data = trim($data);
+
+       $data = stripslashes($data);
+
+       $data = htmlspecialchars($data);
+
+       return $data;
+
+    }
+
+    $email = validate($_POST['Email']);
+
+    $password = validate($_POST['Password']);
+
+    if (empty($email)) {
+
+        echo "User Name is required";
+
+        exit();
+
+    }else if(empty($password)){
+
+        echo"error=Password is required";
+
+        exit();
+
+    }else{
+
+        $sql = "SELECT * FROM customer_login WHERE Email='$email' AND Password ='$password'";
+
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) === 1) {
+
+            $row = mysqli_fetch_assoc($result);
+
+            if ($row['Email'] === $email && $row['Password'] === $password) {
+
+                echo "Logged in!";
+
+                exit();
+
+            }else{
+
+                echo"error=Incorect User name or password";
+
+                exit();
+
+            }
+
+        }else{
+
+            echo"error=Incorect User name or password";
+
+            exit();
+
+        }
+
+    }
+
+}else{
+
+    echo "error";
+
+    exit();
+
 }
 
 ?>
