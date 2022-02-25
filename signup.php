@@ -15,7 +15,7 @@ $email = $_GET['Email'];
 $password = $_GET['Password'];
 
 $sql = "INSERT INTO `eaterometer`.`customer_login` (`Email`,`Password`) VALUES ('$email','$password');";
-echo $sql;
+
 if ($con->query($sql)==true) {
    echo "Successfully inserted";
 }

@@ -65,7 +65,7 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
 
             }else{
 
-                echo"error=Incorect User name or password";
+                echo"Incorect User name or password";
 
                 exit();
 
