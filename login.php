@@ -59,13 +59,13 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
 
             if ($row['Email'] === $email && $row['Password'] === $password) {
 
-                echo "Logged in!";
+                include ('logged_in_cust.html');
 
                 exit();
 
             }else{
 
-                echo"Incorect User name or password";
+                echo"error=Incorect User name or password";
 
                 exit();
 
@@ -90,3 +90,4 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
 }
 
 ?>
+
