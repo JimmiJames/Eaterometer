@@ -203,11 +203,16 @@ section p{
 }
 
 #email_student_signup{
-    margin-left: 85px;
+    margin-left: 100px;
 }
 
-#name_student_signup{
-    margin-left: 85px;
+#fname_student_signup{
+    margin-left: 100px;
+}
+
+#lname_student_signup
+{
+  margin-left: 85px;
 }
 
 #reg_student_signup{
