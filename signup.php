@@ -5,12 +5,8 @@ if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
-<<<<<<< HEAD
 $password = "";
-=======
-$password = "root";
 $db_db = 'eaterometer';
->>>>>>> c0a2c40b4591ce2887233746dc60af0b9fc8d524
 
 $con = mysqli_connect($server,$username,$password,$db_db);
 
@@ -58,13 +54,9 @@ else
         $sql2 = "INSERT INTO customer_login (`Email`,`Password`) VALUES ('$email','$password');";
         //$_SESSION['Uname']=$name;
 
-<<<<<<< HEAD
-        if ($con->query($sql)==true)
-=======
         if ($con->query($sql)===true&&$con->query($sql2)===true)
->>>>>>> c0a2c40b4591ce2887233746dc60af0b9fc8d524
         {
-        echo "Successfully added user $name";
+        echo "Successfully added user $fname";
         }
 
         else
