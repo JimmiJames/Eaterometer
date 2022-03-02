@@ -41,9 +41,10 @@ else if(empty($role))
 }
 else
 {
+
 $sql = "INSERT INTO `eaterometer`.`customer_login` (`Email`,`Password`) VALUES ('$email','$password');";
 //$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
-$_SESSION['Uname']=$name;
+//$_SESSION['Uname']=$name;
 
 if ($con->query($sql)==true){//) {
    echo "Successfully added user $name";
@@ -51,7 +52,7 @@ if ($con->query($sql)==true){//) {
 
 else
 {
-    echo "Error:";
+    echo "Error:".mysqli_connect_error();
 }
 
 $con->close();
