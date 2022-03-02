@@ -5,12 +5,7 @@ if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
-<<<<<<< HEAD
-$password = "root";
-$db_db = 'eaterometer';
-=======
 $password = "";
->>>>>>> refs/remotes/origin/newbranch
 
 $con = mysqli_connect($server,$username,$password,$db_db);
 
@@ -52,7 +47,6 @@ else
         //$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
         //$_SESSION['Uname']=$name;
 
-<<<<<<< HEAD
         if ($con->query($sql)==true)
         {
         echo "Successfully added user $name";
@@ -65,20 +59,6 @@ else
     }
     else
     {
-=======
-$sql = "INSERT INTO `eaterometer`.`customer_login` (`Email`,`Password`) VALUES ('$email','$password');";
-$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
-//$_SESSION['Uname']=$name;
-
-if ($con->query($sql)==true&&$con->query($sql2)==true){//) {
-   echo "Successfully added user $name";
-}
-
-else
-{
-    echo "Error:".mysqli_connect_error();
-}
->>>>>>> refs/remotes/origin/newbranch
 
     }
 $con->close();
