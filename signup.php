@@ -20,6 +20,7 @@ $email = $_GET['Email'];
 $password = $_GET['Password'];
 $phone = $_GET['Phone'];
 $role = $_GET['1'];
+$restaurant_name = "name";
 
 
 if(empty($fname))
@@ -67,6 +68,37 @@ else
     else
     {
 
+        
+
+        $sql2 = "INSERT INTO vendor_details (`First_Name`,`Last_Name`,`Restaurant_Name`,`Phone`) VALUES ('$fname','$lname','$phone','$restaurant_name')";
+        
+        // $sql1 = "SELECT vendor_id FROM vendor_details";
+        // $result = $con->query($sql);
+
+        // if ($result->num_rows > 0) {
+        // // output data of each row
+        // while($row = $result->fetch_assoc()) 
+        // {
+        
+        //         $restaurant_id = $row["vendor_id"];
+        //         //echo "$restaurant_id";
+        //     }
+        // } 
+
+        $sql3 = "INSERT INTO vendor_login (`Email`,`Password`) VALUES ('$email','$password');";
+        //$_SESSION['Uname']=$name;
+        
+        $sql4 = "INSERT INTO restaurant_details (`restaurant_name`) VALUES ('$restaurant_name');";
+
+        if ($con->query($sql2)===true&&$con->query($sql3)===true)
+        {
+        echo "Successfully added user $name";
+        }
+
+        else
+        {
+        echo "ERROR: ".mysqli_error($con);
+        }
     }
 $con->close();
 }
