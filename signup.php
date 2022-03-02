@@ -5,7 +5,7 @@ if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 
 $con = mysqli_connect($server,$username,$password);
 
@@ -43,10 +43,10 @@ else
 {
 
 $sql = "INSERT INTO `eaterometer`.`customer_login` (`Email`,`Password`) VALUES ('$email','$password');";
-//$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
+$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
 //$_SESSION['Uname']=$name;
 
-if ($con->query($sql)==true){//) {
+if ($con->query($sql)==true&&$con->query($sql2)==true){//) {
    echo "Successfully added user $name";
 }
 
