@@ -1,13 +1,14 @@
 <?php
 
-session_start();
+//session_start();
 if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
 $password = "root";
+$db_db = 'eaterometer';
 
-$con = mysqli_connect($server,$username,$password);
+$con = mysqli_connect($server,$username,$password,$db_db);
 
 if (!$con) {
     die("Connection to this database failed dut to".mysqli_connect_error());
@@ -41,21 +42,28 @@ else if(empty($role))
 }
 else
 {
+    if($role == "customer")
+    {
+        $sql = "INSERT INTO customer_login (`Email`,`Password`) VALUES ('$email','$password')";
+        //$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
+        //$_SESSION['Uname']=$name;
 
-$sql = "INSERT INTO `eaterometer`.`customer_login` (`Email`,`Password`) VALUES ('$email','$password');";
-//$sql2 = "INSERT INTO `eaterometer`.`customer_table` (`Name`) VALUES ('$name');";
-//$_SESSION['Uname']=$name;
+        if ($con->query($sql)==true)
+        {
+        echo "Successfully added user $name";
+        }
 
-if ($con->query($sql)==true){//) {
-   echo "Successfully added user $name";
-}
+        else
+        {
+        echo "ERROR".mysqli_error($con);
+        }
+    }
+    else
+    {
 
-else
-{
-    echo "Error:".mysqli_connect_error();
-}
-
+    }
 $con->close();
 }
+
 }
 ?>
