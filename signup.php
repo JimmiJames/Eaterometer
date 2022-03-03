@@ -70,7 +70,7 @@ else
 
         
 
-        $sql2 = "INSERT INTO vendor_details (`First_Name`,`Last_Name`,`Restaurant_Name`,`Phone`) VALUES ('$fname','$lname','$phone','$restaurant_name')";
+        $sql2 = "INSERT INTO vendor_details (`First_Name`,`Last_Name`,`Phone`) VALUES ('$fname','$lname','$phone')";
         
         // $sql1 = "SELECT vendor_id FROM vendor_details";
         // $result = $con->query($sql);
@@ -88,9 +88,10 @@ else
         $sql3 = "INSERT INTO vendor_login (`Email`,`Password`) VALUES ('$email','$password');";
         //$_SESSION['Uname']=$name;
         
-        $sql4 = "INSERT INTO restaurant_details (`restaurant_name`) VALUES ('$restaurant_name');";
+        $sql4 = "INSERT INTO restaurant_details (`Restaurant_Name`) VALUES ('$restaurant_name');";
 
-        if ($con->query($sql2)===true&&$con->query($sql3)===true)
+
+        if ($con->query($sql2)===true&&$con->query($sql3)===true&&$con->query($sql4))
         {
         echo "Successfully added user $name";
         }
