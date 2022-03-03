@@ -20,7 +20,7 @@ $email = $_GET['Email'];
 $password = $_GET['Password'];
 $phone = $_GET['Phone'];
 $role = $_GET['1'];
-$restaurant_name = "name";
+$restaurant_name = $_GET['Rest_name'];
 
 
 if(empty($fname))
