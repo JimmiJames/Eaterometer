@@ -5,7 +5,7 @@ if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $db_db = 'eaterometer';
 
 $con = mysqli_connect($server,$username,$password,$db_db);
@@ -57,7 +57,7 @@ else
 
         if ($con->query($sql)===true&&$con->query($sql2)===true)
         {
-        echo "Successfully added user $name";
+        echo "Successfully added user $fname";
         }
 
         else

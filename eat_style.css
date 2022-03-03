@@ -231,7 +231,7 @@ section p{
     margin-left: 58px;
 }
 
-#login_button,.signup_button{
+#login_button{
     position: relative;
     display: block;
     left: 70px;
