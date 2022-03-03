@@ -5,7 +5,7 @@ if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 $db_db = 'eaterometer';
 
 $con = mysqli_connect($server,$username,$password,$db_db);
