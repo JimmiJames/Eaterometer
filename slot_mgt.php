@@ -27,7 +27,6 @@ $allotted_item_name = "Item";
 $price = "1200";
 
 
-
 // if(empty($slot_time))
 // {
 //     echo "slot time is empty";
@@ -61,8 +60,6 @@ $price = "1200";
      // }
     
 $con->close();
-
-
 
 // }
 ?>

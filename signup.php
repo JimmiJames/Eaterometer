@@ -11,7 +11,7 @@ $db_db = 'eaterometer';
 $con = mysqli_connect($server,$username,$password,$db_db);
 
 if (!$con) {
-    die("Connection to this database failed dut to".mysqli_connect_error());
+    die("Connection to this database failed due to".mysqli_connect_error());
 }
 
 $fname = $_GET['fName'];
