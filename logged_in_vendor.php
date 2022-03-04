@@ -65,6 +65,7 @@ session_start();
         <div id="btnback">
             <h2>ADD</h2>
             <br>
+            <form action="slot_mgt.php" method="get">
            <label>Slot Time</label>&nbsp;
            <div class="dropdown">
            <select name="time" id="time_id">
@@ -81,6 +82,9 @@ session_start();
        <br><br>
        <label for="end">End time:</label>
        <input type="time" id="end" name="end">
+       <br><br>
+       <input type="submit" value="Confirm">
+       </form>
 </div>
         </div>
 
