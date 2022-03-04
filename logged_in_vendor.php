@@ -67,22 +67,38 @@ session_start();
             <br>
             <form action="slot_mgt.php" method="get">
            <label>Slot Time</label>&nbsp;
+           <?php
+           $slot_query = mysqli_query("SELECT * FROM `table`");
+           $rowcount = mysqli_num_rows($slot_query);
+           ?>
            <div class="dropdown">
            <select name="time" id="time_id">
-           <option value="8-9AM">8-9AM</option>
-           <option value="1-2PM">1-2PM</option>
-           <option value="8-9PM">8-9PM</option>
+               <?php
+               for($i=1;$i<=$rowcount;$i++)
+               {
+                  $row_fetch=mysqli_fetch_array($slot_query);
+               }
+               ?>
+           <option value="<?php
+               echo $row_fetch["time"];
+               ?>">
+               <?php
+               echo $row_fetch["time"];
+               ?>
+           </option>
           </select>
           </div><br><br>
        <label>Price</label>&nbsp;
-       <input type="number" name="price" value="Enter the price" id="">
+       <input type="number" name="price" placeholder="Enter the price" id="">
        <br><br>
-       <label for="start">Start time:</label>
+       <label>Item</label>&nbsp;
+       <input type="text" name="item" placeholder="Enter the item" id="">
+       <!-- <label for="start">Start time:</label>
        <input type="time" id="start" name="start">
        <br><br>
        <label for="end">End time:</label>
-       <input type="time" id="end" name="end">
-       <br><br>
+       <input type="time" id="end" name="end">-->
+       <br><br> 
        <input type="submit" value="Confirm">
        </form>
 </div>
