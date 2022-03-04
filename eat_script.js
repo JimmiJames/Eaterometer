@@ -2,6 +2,7 @@ let login_link = window.document.getElementById("login");
 let signup_link = window.document.getElementById("signup");
 let vendor_select = window.document.getElementById("vendor_radio");
 let customer_select = window.document.getElementById("customer_radio");
+let signup_button = window.document.getElementById("signup_button");
 let vender_option_selected = window.document.getElementById("vendor_select");
 // let signup_student_link = window.document.getElementById("student_signup_option_id");
 //let signup_vendor_link = window.document.getElementById("vendor_signup_option_id");
@@ -86,7 +87,7 @@ vendor_select.addEventListener("click",function(){
     else
     {
         vender_option_selected.style.visibility="visible";
-
+        signup_button.style.top="50px";
     }
 })
 

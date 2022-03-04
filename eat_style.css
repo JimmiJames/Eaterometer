@@ -241,6 +241,17 @@ section p{
     cursor: pointer;
 }
 
+#signup_button{
+  position: relative;
+  display: block;
+  padding: 5px;
+  left: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  border-style:solid;
+  cursor: pointer;
+}
+
 #icon1{
   position: relative;
   left: 310px;

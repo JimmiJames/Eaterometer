@@ -1,11 +1,17 @@
+
 <?php
 
-//session_start();
+session_start();
+?>
+
+<?php
+
+
 if(isset($_GET['signup_button_name']))
 {
 $server = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $db_db = 'eaterometer';
 
 $con = mysqli_connect($server,$username,$password,$db_db);
@@ -53,7 +59,7 @@ else
     {
         $sql = "INSERT INTO customer_details (`First_Name`,`Last_Name`,`Phone`) VALUES ('$fname','$lname','$phone')";
         $sql2 = "INSERT INTO customer_login (`Email`,`Password`) VALUES ('$email','$password');";
-        //$_SESSION['Uname']=$name;
+        $_SESSION["Uname"]=$fname;
 
         if ($con->query($sql)===true&&$con->query($sql2)===true)
         {
