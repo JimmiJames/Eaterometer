@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+   
+}
+#backimg{
+    width: 1519px;
+    height: 1000px;
+    overflow: hidden; 
+}
+#customer_status{
+    border-radius: 2px;
+    background-color: white;
+    width: 1300px;
+    height: 254px;
+    padding: 50px;
+    border: 2px;
+    border-radius: 5px;
+    /* border: 2px solid black; */
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    position: relative;
+    margin-left: 50px;
+    margin-top: -910px;
+    margin-right: 0px;
+}
+
+#user_image{
+    border-radius: 50%;
+    width: 15%;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 20px;
+    display: inline;
+}
+
+#customer_detail{
+    position: relative;
+    margin-left: 365px;
+    margin-top: -177px;
+}
+
+#name{
+    font-size: large;
+    font-weight: bolder;
+}
+
+#bookings{
+    margin-top: -130px;
+    position: relative;
+    margin-left: 673px;
+}
+
+.booking1{
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    width: 154px;
+    height: 23px;
+    padding: 25px;
+    border: 2px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    position: relative;
+    margin-left: 50px;
+    margin-top: 90px;
+    font-size: x-large;
+}
+
+#booking2_id{
+    position: relative;
+    margin-top: -73px;
+    margin-left: 339px;
+}
+#booking3_id{
+    position: relative;
+    margin-top: 103px;
+    margin-left: 49px;
+}
+
+#slot_button{
+    width: 3%;
+    transform:rotate(90deg);
+    transition:1s;
+    background-color: white;
+    border-width: 0px;
+}
+
+#arrow_img{
+    width: 81%;
+    height: 91%;
+}
+
+#btn{
+
+    background-color: white;
+    width: 433px;
+    height: 254px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 818px;
+    margin-top: 50px;
+}
+#btnback{
+    display:none;
+    background-color: white;
+    width: 433px;
+    height: 254px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 818px;
+    margin-top: 50px;
+    transition: 1s;
+}
+
+
+
+/* ---------------------------- */
+
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
