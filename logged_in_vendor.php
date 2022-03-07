@@ -80,11 +80,27 @@ if(!$conn)
             <br>
             <form action="slot_mgt.php" method="get">
            <label>Slot Time</label>&nbsp;
-           <?php
            
+           <!-- header("location:login.php"); -->
+           
+           <?php
+           $server = "localhost";
+           $username = "root";
+           $password = "root";
+           $db_db = 'eaterometer';
+           
+           $con = mysqli_connect($server,$username,$password,$db_db);
+           
+           if (!$con) {
+               die("Connection to this database failed due to".mysqli_connect_error());
+           }
+           
+           $slot_query = "SELECT * FROM slot_mgt";
+           
+           $rowcount = mysqli_num_rows($slot_query);
            ?>
            <div class="dropdown">
-           <select name="time" id="time_id">
+           <select name="slot_item" id="time_id">
                <?php
                for($i=1;$i<=$rowcount;$i++)
                {
@@ -92,13 +108,14 @@ if(!$conn)
                }
                ?>
            <option value="<?php
-               echo $row_fetch["time"];
-               ?>">
+               echo $row_fetch["slot_time"];
+               ?>"
                <?php
-               echo $row_fetch["time"];
-               ?>
+               echo $row_fetch["slot_time"];
+               ?>>
            </option>
           </select>
+          
           </div><br><br>
        <label>Price</label>&nbsp;
        <input type="number" name="price" placeholder="Enter the price" id="">
@@ -117,6 +134,7 @@ if(!$conn)
         </div>
 
     </div>
+    
 </body>
 <script src="logged_in_vendor.js"></script>
 </html>
