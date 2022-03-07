@@ -2,7 +2,20 @@
 
 session_start();
 ?>
+<?php
+$db_host = 'localhost';
+$db_user = 'root';
+$db_password = 'root';
+$db_db = 'eaterometer';
 
+$conn = mysqli_connect($db_host, $db_user, $db_password, $db_db);
+if(!$conn)
+{
+    echo mysqli_connect_error();
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,8 +81,7 @@ session_start();
             <form action="slot_mgt.php" method="get">
            <label>Slot Time</label>&nbsp;
            <?php
-           $slot_query = mysqli_query("SELECT * FROM `table`");
-           $rowcount = mysqli_num_rows($slot_query);
+           
            ?>
            <div class="dropdown">
            <select name="time" id="time_id">
