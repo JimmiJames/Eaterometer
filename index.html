@@ -85,19 +85,27 @@
             <form action="signup.php" method="get">
                 First Name <input type="text" name="fName" id="fname_student_signup"><br><br>
                 Last Name <input type="text" name="lName" id="lname_student_signup"><br><br>
+                <!-- Registration No <input type="number" name="Reg" id="reg_student_signup"><br><br> -->
                 Phone No <input type="tel" name="Phone" id="phone_student_signup"><br><br>
                 Email <input type="email" name="Email" id="email_student_signup"><br><br>
                 Password <input type="password" name="Password" id="newpass_student_signup"><br><br>
                 Role <input type="radio" name="1" id="customer_radio" value="customer"> Customer
-                     <input type="radio" name="1" id="vendor_radio" value="vendor"> Vendor
-                     <br><br>
+                <input type="radio" name="1" id="vendor_radio" value="vendor"> Vendor
+                <br><br>
                 <div id="vendor_select">
                     Restuarant name <input type="text" name="Rest_name" id="rest_name_id">
+                <br>
+                <br>
+                <br>
                 </div>
-                <br>
-                <br>
-                <br>
-                <input type="submit" id="signup_button" value="Sign up">
+                <input type="submit" id="signup_button" style="position: relative;
+                display: block;
+                padding: 5px;
+                left: 100px;
+                padding: 5px;
+                border-radius: 5px;
+                border-style:solid;
+                cursor: pointer;" value="Sign up" name="signup_button_name">
             </form>
         </div>
 
