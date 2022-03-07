@@ -84,20 +84,7 @@ if(!$conn)
            <!-- header("location:login.php"); -->
            
            <?php
-           $server = "localhost";
-           $username = "root";
-           $password = "root";
-           $db_db = 'eaterometer';
            
-           $con = mysqli_connect($server,$username,$password,$db_db);
-           
-           if (!$con) {
-               die("Connection to this database failed due to".mysqli_connect_error());
-           }
-           
-           $slot_query = "SELECT * FROM slot_mgt";
-           
-           $rowcount = mysqli_num_rows($slot_query);
            ?>
            <div class="dropdown">
            <select name="slot_item" id="time_id">
