@@ -41,6 +41,7 @@ session_start();
         </div>
 
    <div id="twobtn">
+       <img id="backbutton" src="https://www.freeiconspng.com/uploads/arrow-icon-28.png" alt="">
        <div id="btn">
            <button id="add">
                ADD +
@@ -64,7 +65,7 @@ session_start();
            <?php
            $server = "localhost";
            $username = "root";
-           $password = "root";
+           $password = "";
            $db_db = 'eaterometer';
            
            $con = mysqli_connect($server,$username,$password,$db_db);
