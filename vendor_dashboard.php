@@ -65,7 +65,7 @@ session_start();
            <?php
            $server = "localhost";
            $username = "root";
-           $password = "";
+           $password = "root";
            $db_db = 'eaterometer';
            
            $con = mysqli_connect($server,$username,$password,$db_db);
@@ -116,7 +116,7 @@ session_start();
            <?php
            $server = "localhost";
            $username = "root";
-           $password = "";
+           $password = "root";
            $db_db = 'eaterometer';
            
            $con = mysqli_connect($server,$username,$password,$db_db);
