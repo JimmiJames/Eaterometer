@@ -24,7 +24,6 @@ session_start();
             <li><a href="#about_me">About Us</a></li>
             <li><a href="#contact_us_li">Contact Us</a></li>
             <li><?php
-            //  echo "Welcome".$_SESSION["Uname"];
             ?></li>
         </ul>
     </nav>
@@ -41,15 +40,6 @@ session_start();
             <div class="booking1" id="booking3_id">600</div>
         </div>
 
-        <!-- <div id="button">
-        <button id="slot_button">
-           <img id="arrow_img" src="https://www.freeiconspng.com/thumbs/arrow-icon/right-arrow-icon-27.png" alt="Error">
-        </button>
-        </div> -->
-
-       <!-- <div id="slot_mang">
-           <label>SLOT-TIME</label><input type="datetime" name="slot_datetime" id="">
-       </div> -->
    <div id="twobtn">
        <div id="btn">
            <button id="add">
@@ -85,24 +75,29 @@ session_start();
            $slot_query = "SELECT * FROM slot_mgt";
            
            $rowcount = mysqli_num_rows($slot_query);
+           $results=mysqli_query($con, $slot_query);
            ?>
-           <div class="dropdown">
-           <select name="slot_item" id="time_id">
-               <?php
-               for($i=1;$i<=$rowcount;$i++)
-               {
-                  $row_fetch=mysqli_fetch_array($slot_query);
-               }
-               ?>
-           <option value="<?php
-               echo $row_fetch["slot_time"];
-               ?>"
-               <?php
-               echo $row_fetch["slot_time"];
-               ?>>
-           </option>
-          </select>
           
+          <div class="dropdown">
+            <label></label>
+            <select name="slot_time ">
+                <option value="">Select Slot :</option>
+             
+                <?php
+                    $results=mysqli_query($con, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results as $slot){
+                ?>
+                        <option value="<?php echo $slot["slot_time"];?>"><?php echo $slot["slot_time"];?></option>
+                <?php
+                    }
+                ?>
+            </select>
+        </div>
+
+
+
+
           </div><br><br>
        <label>Price</label>&nbsp;
        <input type="number" name="price" placeholder="Enter the price" id="">

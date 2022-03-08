@@ -14,7 +14,7 @@ if (!$con) {
     die("Connection to this database failed dut to".mysqli_connect_error());
 }
 
-// $fname = $_GET['fName'];
+ $slot_time = $_GET['slot_time'];
 // $lname = $_GET['lName'];
 // $email = $_GET['Email'];
 // $password = $_GET['Password'];
@@ -22,7 +22,6 @@ if (!$con) {
 // $role = $_GET['1'];
 // $restaurant_name = $_GET['Rest_name'];
 
-$slot_time = "2022:02:03";
 $allotted_item_name = "Item";
 $price = "1200";
 
@@ -43,7 +42,7 @@ $price = "1200";
 // {
     // if($role == "")
     // {
-        $sql = "INSERT INTO slot_mgt (`Slot_time`,`Allotted_Item_Name`,`Price`) VALUES ('$slot_time','$allotted_item_name','$price')";
+        $sql = "INSERT INTO slot_mgt (`slot_time_start`,`Allotted_Item_Name`,`Price`) VALUES ('$slot_time','$allotted_item_name','$price')";
        // $sql2 = "INSERT INTO customer_login (`Email`,`Password`) VALUES ('$email','$password');";
         //$_SESSION['Uname']=$name;
 
