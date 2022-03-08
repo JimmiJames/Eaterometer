@@ -41,6 +41,7 @@ session_start();
         </div>
 
    <div id="twobtn">
+       <img id="backbutton" src="https://www.freeiconspng.com/uploads/arrow-icon-28.png" alt="">
        <div id="btn">
            <button id="add">
                ADD +
@@ -64,7 +65,7 @@ session_start();
            <?php
            $server = "localhost";
            $username = "root";
-           $password = "root";
+           $password = "";
            $db_db = 'eaterometer';
            
            $con = mysqli_connect($server,$username,$password,$db_db);
@@ -130,7 +131,21 @@ session_start();
           
          <div class="dropdown">
             <label>Item</label>&nbsp;
-            <input type="text" name="item" placeholder="Enter the item" id="">
+            <select name="items">
+                <option value="">Select Item:</option>
+             
+                <?php
+                    $results=mysqli_query($con, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results as $slot){
+                ?>
+                        <option value="<?php echo $slot["slot_time"];?>"><?php echo $slot["slot_time"];?></option>
+                <?php
+                    }
+                ?>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Edit items">
             <br><br> 
             <label>Price</label>&nbsp;
             <input type="number" name="price" placeholder="Enter the price" id="">
@@ -140,7 +155,7 @@ session_start();
             <label for="end">End time:</label>
             <input type="time" id="end" name="end">
             <br><br> 
-            <input type="submit" value="Confirm">
+            <input type="submit" value="Update">
         </div>
 </div>
 </div>
