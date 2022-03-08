@@ -2,13 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
-body{
-   
-}
 #backimg{
     width: 1519px;
     height: 1000px;
-    overflow: hidden; 
+    overflow: hidden;
+    margin-bottom: -3px;
 }
 #customer_status{
     border-radius: 2px;
