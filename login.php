@@ -59,7 +59,7 @@ if (isset($_POST['Email']) && isset($_POST['Password'])) {
 
             if ($row['Email'] === $email && $row['Password'] === $password) {
 
-                header ('location:logged_in_vendor.php');
+                header ('location:vendor_dashboard.php');
 
                 exit();
 

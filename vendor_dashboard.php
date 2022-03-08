@@ -48,15 +48,16 @@ session_start();
            <button id="view">
                VIEW +
            </button>
-           <button id="add">
+           <button id="update">
                UPDATE +
            </button>
        </div>
-        <div id="btnback">
+       <!-- Add -->
+        <div id="addbtnback">
             <h2>ADD</h2>
             <br>
             <form action="slot_mgt.php" method="get">
-           <label>Slot Time</label>&nbsp;
+            <label>Slot Time</label>&nbsp;
            
            <!-- header("location:login.php"); -->
            
@@ -72,14 +73,11 @@ session_start();
                die("Connection to this database failed due to".mysqli_connect_error());
            }
            
-           $slot_query = "SELECT * FROM slot_mgt";
-           
-           $rowcount = mysqli_num_rows($slot_query);
-           $results=mysqli_query($con, $slot_query);
+        
+           $results=mysqli_query($con, "SELECT * FROM slot_mgt");
            ?>
           
           <div class="dropdown">
-            <label></label>
             <select name="slot_time ">
                 <option value="">Select Slot :</option>
              
@@ -93,30 +91,60 @@ session_start();
                     }
                 ?>
             </select>
+            <br><br>
+
+            <label>Price</label>&nbsp;
+            <input type="number" name="price" placeholder="Enter the price" id="">
+            <br><br>
+            <label>Item</label>&nbsp;
+            <input type="text" name="item" placeholder="Enter the item" id="">
+            <br><br> 
+            <input type="submit" value="Confirm">
+     </div>
+     
+ </div>          
+</form>
+<!-- UPDATE -->
+<div id="updatebtnback">
+            <h2>UPDATE</h2>
+            <br>
+            <form action="slot_mgt.php" method="get">
+            
+           <!-- header("location:login.php"); -->
+           
+           <?php
+           $server = "localhost";
+           $username = "root";
+           $password = "root";
+           $db_db = 'eaterometer';
+           
+           $con = mysqli_connect($server,$username,$password,$db_db);
+           
+           if (!$con) {
+               die("Connection to this database failed due to".mysqli_connect_error());
+           }
+           
+           $slot_query = "SELECT * FROM slot_mgt";
+           $results=mysqli_query($con, $slot_query);
+           ?>
+          
+         <div class="dropdown">
+            <label>Item</label>&nbsp;
+            <input type="text" name="item" placeholder="Enter the item" id="">
+            <br><br> 
+            <label>Price</label>&nbsp;
+            <input type="number" name="price" placeholder="Enter the price" id="">
+            <br><br>
+            <label for="start">Start time:</label>
+            <input type="time" id="start" name="start">&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="end">End time:</label>
+            <input type="time" id="end" name="end">
+            <br><br> 
+            <input type="submit" value="Confirm">
         </div>
-
-
-
-
-          </div><br><br>
-       <label>Price</label>&nbsp;
-       <input type="number" name="price" placeholder="Enter the price" id="">
-       <br><br>
-       <label>Item</label>&nbsp;
-       <input type="text" name="item" placeholder="Enter the item" id="">
-       <!-- <label for="start">Start time:</label>
-       <input type="time" id="start" name="start">
-       <br><br>
-       <label for="end">End time:</label>
-       <input type="time" id="end" name="end">-->
-       <br><br> 
-       <input type="submit" value="Confirm">
-       </form>
 </div>
-        </div>
-
-    </div>
-    
+</div>
+</div>
 </body>
 <script src="logged_in_vendor.js"></script>
 </html>
