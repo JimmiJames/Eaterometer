@@ -2,20 +2,7 @@
 
 session_start();
 ?>
-<?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'eaterometer';
 
-$conn = mysqli_connect($db_host, $db_user, $db_password, $db_db);
-if(!$conn)
-{
-    echo mysqli_connect_error();
-    exit();
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,6 +61,10 @@ if(!$conn)
            <!-- header("location:login.php"); -->
            
            <?php
+           $server = "localhost";
+           $username = "root";
+           $password = "root";
+           $db_db = 'eaterometer';
            
            $con = mysqli_connect($server,$username,$password,$db_db);
            
