@@ -5,11 +5,6 @@ let updatebutton = window.document.getElementById("update");
 let buttons = window.document.getElementById("btn");
 let buttons2 = window.document.getElementById("addbtnback");
 let buttons3 = window.document.getElementById("updatebtnback");
-<<<<<<< HEAD
-
-=======
-let backbtn = window.document.getElementById("backbutton");
->>>>>>> refs/remotes/origin/newbranch
 
 
 
