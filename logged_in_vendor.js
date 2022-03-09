@@ -16,7 +16,6 @@ backbtn.addEventListener("click",function()
      buttons3.style.display="none";
      // buttons3.style.opacity=0;
      console.log("clicked");
-
 })
 
 
