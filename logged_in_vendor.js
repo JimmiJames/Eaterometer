@@ -7,8 +7,6 @@ let buttons2 = window.document.getElementById("addbtnback");
 let buttons3 = window.document.getElementById("updatebtnback");
 let backbtn = window.document.getElementById("backbutton");
 
-
-
 backbtn.addEventListener("click",function()
 {
      buttons.style.display="block";
