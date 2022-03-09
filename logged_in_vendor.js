@@ -5,6 +5,7 @@ let updatebutton = window.document.getElementById("update");
 let buttons = window.document.getElementById("btn");
 let buttons2 = window.document.getElementById("addbtnback");
 let buttons3 = window.document.getElementById("updatebtnback");
+let backbtn = window.document.getElementById("backbutton");
 
 
 
@@ -16,18 +17,10 @@ backbtn.addEventListener("click",function()
      // buttons2.style.opacity=0;
      buttons3.style.display="none";
      // buttons3.style.opacity=0;
+     console.log("clicked");
 
 })
-// slotbutton.addEventListener("click",function(){
-//     if(slotbutton.style.transform=="rotate(0deg)")
-//     {
-//         slotbutton.style.transform="rotate(90deg)";
-//     }
 
-//     else{
-//         slotbutton.style.transform="rotate(0deg)"
-//     }
-// })
 
 addbutton.addEventListener("click",function(){
      buttons2.style.display="block";
