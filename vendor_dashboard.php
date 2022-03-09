@@ -5,6 +5,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,18 @@ session_start();
     
 </head>
 <body>
+
+    <script>
+        function handle_select(myForm)
+        {
+           // alert("yes");
+            var selIndex = myForm.optionsList.selectedIndex;
+            var selName = myForm.optionsList.options[selIndex].text;
+            //document.writeln(selName);
+            alert(selName);
+        }
+    </script>
+
     <img id="backimg" src="https://images.pexels.com/photos/7130503/pexels-photo-7130503.jpeg?cs=srgb&dl=pexels-gradienta-7130503.jpg&fm=jpg" alt="Error">
     <nav id="navbar" style="z-index:5">
         <ul>
@@ -74,7 +87,7 @@ session_start();
                die("Connection to this database failed due to".mysqli_connect_error());
            }
            
-        
+           
            $results=mysqli_query($con, "SELECT * FROM slot_mgt");
            ?>
           
@@ -129,26 +142,33 @@ session_start();
            $results=mysqli_query($con, "SELECT * FROM slot_mgt");
            ?>
           
+
          <div class="dropdown">
             <label>Item</label>&nbsp;
-            <select name="items">
-                <option value="">Select Item:</option>
+            <select name="optionsList" onchange="handle_select(this.form)">
+                <option  value="">Select Item:</option>
              
                 <?php
-                    $results=mysqli_query($con, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //$item_query = "SELECT * from slot_mgt";
+                    $results=mysqli_query($con, "SELECT * from slot_mgt");
                     //loop
                     foreach ($results as $slot){
                 ?>
-                        <option value="<?php echo $slot["slot_time"];?>"><?php echo $slot["slot_time"];?></option>
+                        <option value="<?php echo $slot["allotted_item_name"];?>"><?php echo $slot["allotted_item_name"];?></option>
                 <?php
                     }
                 ?>
             </select>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <input type="button" value="Edit items">
-            <br><br> 
+            <br><br>
             <label>Price</label>&nbsp;
-            <input type="number" name="price" placeholder="Enter the price" id="">
+            <?php
+                
+                //get value of js var into the input of price textbox
+            ?>
+            <input type="text" name="price" placeholder="Enter the price" id="" value=$get_price>
+            
             <br><br>
             <label for="start">Start time:</label>
             <input type="time" id="start" name="start">&nbsp;&nbsp;&nbsp;&nbsp;
