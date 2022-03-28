@@ -9,16 +9,7 @@ session_start();
 
 if(isset($_GET['signup_button_name']))
 {
-$server = "localhost";
-$username = "root";
-$password = "root";
-$db_db = 'eaterometer';
-
-$con = mysqli_connect($server,$username,$password,$db_db);
-
-if (!$con) {
-    die("Connection to this database failed due to".mysqli_connect_error());
-}
+require("universalconnection.php");
 
 $fname = $_GET['fName'];
 $lname = $_GET['lName'];

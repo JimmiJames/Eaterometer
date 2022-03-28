@@ -8,7 +8,7 @@
     overflow: hidden;
     margin-bottom: -3px;
 }
-#customer_status{
+#vendor_status{
     border-radius: 2px;
     background-color: white;
     width: 1300px;
@@ -33,7 +33,7 @@
     display: inline;
 }
 
-#customer_detail{
+#vendor_detail{
     position: relative;
     margin-left: 365px;
     margin-top: -177px;
@@ -64,6 +64,7 @@
     margin-left: 50px;
     margin-top: 90px;
     font-size: x-large;
+    transition: 0.4s;
 }
 
 #booking2_id{
@@ -83,11 +84,6 @@
     transition:1s;
     background-color: white;
     border-width: 0px;
-}
-
-#arrow_img{
-    width: 81%;
-    height: 91%;
 }
 
 #btn{
@@ -126,6 +122,26 @@
     margin-left: 818px;
     margin-top: 50px;
     transition: 1s;
+}
+
+#backbutton{
+    transform: rotate(180deg);
+    width: 2.8%;
+    margin-left: 824px;
+    position: absolute;
+}
+
+#booking1_id:hover{
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    background-color: black;
+    color: white;
+    /* transition: 1s; */
+    width: 160px;
+    height: 28px;
+}
+
+#backbutton:hover{
+    background-color: silver;
 }
 
 /* ---------------------------- */

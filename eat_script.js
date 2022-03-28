@@ -96,6 +96,12 @@ customer_select.addEventListener("click",function(){
  vender_option_selected.style.visibility="hidden";
 
 })
+// next code commented
+
+
+
+
+
 
 // cancelbtn.addEventListener("click",function(){
 //     login_form.style.opacity=0;

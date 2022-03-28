@@ -11,7 +11,7 @@ scroll-behavior: smooth;
     align-items: center;
     position: fixed;
     top: 0px;
-overflow: hidden;
+    overflow: hidden;
     /* padding:7px 0px; */
 }
 /* adding comment in new folder */
@@ -168,7 +168,7 @@ section p{
 
 .login_form{
     position: relative;
-    bottom: 1550px;
+    bottom: 1685px;
     left: 550px;
     background-color: white;
     display: inline-flex;
@@ -203,24 +203,24 @@ section p{
 }
 
 #email_student_signup{
-    margin-left: 100px;
+    margin-left: 12px;
 }
 
 #fname_student_signup{
-    margin-left: 100px;
+    margin-left: 12px;
 }
 
 #lname_student_signup
 {
-  margin-left: 85px;
+  margin-left: 13px;
 }
 
 #reg_student_signup{
-    margin-left: 21px;
+    margin-left: 13px;
 }
 
 #newpass_student_signup{
-    margin-left: 28px;
+    margin-left: 13px;
 }
 
 #confpass_student_signup{
@@ -228,7 +228,7 @@ section p{
 }
 
 #phone_student_signup{
-    margin-left: 58px;
+    margin-left: 18px;
 }
 
 #login_button{
@@ -263,8 +263,8 @@ section p{
 
 #icon2{
     position: relative;
-    left: 333px;
-    top: -50px;
+    left: 317px;
+    top: -42px;
     display: block;
     width: 30px;
     height: 30px;
