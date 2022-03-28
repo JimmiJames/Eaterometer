@@ -237,6 +237,18 @@
     cursor: pointer;
   }
 
+#iconedititem:hover{
+    filter: brightness(73%);
+}
+
+#iconeditprice:hover{
+    filter: brightness(73%);
+}
+
+#iconedittime:hover{
+    filter: brightness(73%);
+}
+
 /* ---------------------------- */
 
   
