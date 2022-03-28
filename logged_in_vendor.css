@@ -137,6 +137,19 @@
     transition: 1s;
 }
 
+#update_price{
+    display:none;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 560px;
+    margin-top: -266px;
+    transition: 1s;
+}
+
 #update_time{
     display:none;
     background-color: white;
@@ -181,6 +194,15 @@
 
 
 #iconedititem{
+    position: relative;
+    left: 209px;
+    top: -43px;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  #iconeditprice{
     position: relative;
     left: 209px;
     top: -43px;

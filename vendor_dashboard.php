@@ -140,6 +140,17 @@
                 <br><br>
                 <input type="button" value="Confirm">
           </div>
+
+          <div id="update_price">
+     <a href=""><img id="iconeditprice" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error"></a>
+       <label>Old Price</label>&nbsp;
+       <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
+       <br>
+       TO
+       <br>
+       <label>New Price</label>&nbsp;
+      <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
+    </div>
      </div>
 </body>
 <script src="logged_in_vendor.js"></script>

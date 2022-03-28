@@ -63,7 +63,7 @@
                     &nbsp;
                     <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" value="Get Price" name="getprice">
+                    <input type="button" value="Get Price" name="getprice" id="edit_price_btn">
                     <br><br>
                     <label>Slot Time</label>&nbsp;
                     <select name="slot_time">

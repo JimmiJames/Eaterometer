@@ -12,78 +12,79 @@ let bookingbox2 = window.document.getElementById("booking2_id");
 let bookingbox3 = window.document.getElementById("booking3_id");
 let edititembtn = window.document.getElementById("edit_item_btn");
 let edittimebtn = window.document.getElementById("edit_time_btn");
+let editpricebtn = window.document.getElementById("edit_price_btn");
 let backgradientimg = window.document.getElementById("user_image");
 let updateitemnamebox = window.document.getElementById("update_items");
+let updatepricenamebox = window.document.getElementById("update_price");
 let updatetimenamebox = window.document.getElementById("update_time");
 
 // vendor back button event
 var i;
-for(i=0;i<backbtn.length;i++){
-backbtn[i].addEventListener("click",function()
-{
-     // vendor three button styles
-     buttons.style.display="block";
-     buttons.style.opacity=1;
+for (i = 0; i < backbtn.length; i++) {
+     backbtn[i].addEventListener("click", function () {
+          // vendor three button styles
+          buttons.style.display = "block";
+          buttons.style.opacity = 1;
 
-     // vendor add styles
-     buttons2.style.display="none";
+          // vendor add styles
+          buttons2.style.display = "none";
 
-     // vendor update styles
-     buttons3.style.display="none";
-})
+          // vendor update styles
+          buttons3.style.display = "none";
+     })
 }
 // vendor add button event
-addbutton.addEventListener("click",function()
-{
+addbutton.addEventListener("click", function () {
      // vendor add styles
-     buttons2.style.display="block";
-     buttons2.style.flexDirection="row";
+     buttons2.style.display = "block";
+     buttons2.style.flexDirection = "row";
 
      // vendor three button styles
-     buttons.style.opacity=0;
-     buttons.style.display="none";
+     buttons.style.opacity = 0;
+     buttons.style.display = "none";
 
 })
 
 // vendor update button event
-updatebutton.addEventListener("click",function()
-{
+updatebutton.addEventListener("click", function () {
      // vendor update styles
-     buttons3.style.display="block";
-     buttons3.style.flexDirection="row";
+     buttons3.style.display = "block";
+     buttons3.style.flexDirection = "row";
 
      // vendor three button styles
-     buttons.style.opacity=0;
-     buttons.style.display="none";
+     buttons.style.opacity = 0;
+     buttons.style.display = "none";
 })
 
-darkmode.addEventListener("click",function()
-{
-     if(vendorstat.style.backgroundColor!="black")
-     {
-          vendorstat.style.backgroundColor="black";
-          vendorstat.style.transition="0.4s";
-          vendorstat.style.color="white";
-          bookingbox1.style.border="2px solid white";
-          bookingbox2.style.border="2px solid white";
-          bookingbox3.style.border="2px solid white";
+darkmode.addEventListener("click", function () {
+     if (vendorstat.style.backgroundColor != "black") {
+          vendorstat.style.backgroundColor = "black";
+          vendorstat.style.transition = "0.4s";
+          vendorstat.style.color = "white";
+          bookingbox1.style.border = "2px solid white";
+          bookingbox2.style.border = "2px solid white";
+          bookingbox3.style.border = "2px solid white";
      }
-     else{
-          vendorstat.style.backgroundColor="white";
-          vendorstat.style.transition="0.4s";
-          vendorstat.style.color="black";
-          bookingbox1.style.border="2px";
-          bookingbox2.style.border="2px";
-          bookingbox3.style.border="2px";
+     else {
+          vendorstat.style.backgroundColor = "white";
+          vendorstat.style.transition = "0.4s";
+          vendorstat.style.color = "black";
+          bookingbox1.style.border = "2px";
+          bookingbox2.style.border = "2px";
+          bookingbox3.style.border = "2px";
      }
 })
 
-edititembtn.addEventListener("click",function(){
-updateitemnamebox.style.display="block";
-// backgradientimg.style.filter="brightness(40%)";
+edititembtn.addEventListener("click", function () {
+     updateitemnamebox.style.display = "block";
+     // backgradientimg.style.filter="brightness(40%)";
 })
 
-edittimebtn.addEventListener("click",function(){
-     updatetimenamebox.style.display="block";
-     })
+edittimebtn.addEventListener("click", function () {
+     updatetimenamebox.style.display = "block";
+})
+
+editpricebtn.addEventListener("click", function () {
+     updatepricenamebox.style.display = "block";
+})
 
