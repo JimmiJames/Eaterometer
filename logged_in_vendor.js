@@ -17,6 +17,10 @@ let backgradientimg = window.document.getElementById("user_image");
 let updateitemnamebox = window.document.getElementById("update_items");
 let updatepricenamebox = window.document.getElementById("update_price");
 let updatetimenamebox = window.document.getElementById("update_time");
+let updateitemcancel = window.document.getElementById("iconedititem");
+let updatepricecancel = window.document.getElementById("iconeditprice");
+let updatetimecancel = window.document.getElementById("iconedittime");
+
 
 // vendor back button event
 var i;
@@ -86,5 +90,17 @@ edittimebtn.addEventListener("click", function () {
 
 editpricebtn.addEventListener("click", function () {
      updatepricenamebox.style.display = "block";
+})
+
+updateitemcancel.addEventListener("click",function(){
+     updateitemnamebox.style.display = "none";
+})
+
+updatepricecancel.addEventListener("click",function(){
+     updatepricenamebox.style.display = "none";
+})
+
+updatetimecancel.addEventListener("click",function(){
+     updatetimenamebox.style.display = "none";
 })
 
