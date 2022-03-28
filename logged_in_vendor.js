@@ -5,14 +5,19 @@ let updatebutton = window.document.getElementById("update");
 let buttons = window.document.getElementById("btn");
 let buttons2 = window.document.getElementById("addbtnback");
 let buttons3 = window.document.getElementById("updatebtnback");
-let backbtn = window.document.getElementById("backbutton");
+let backbtn = window.document.getElementsByClassName("backbutton");
 let darkmode = window.document.getElementById("dark_mode");
 let bookingbox1 = window.document.getElementById("booking1_id");
 let bookingbox2 = window.document.getElementById("booking2_id");
 let bookingbox3 = window.document.getElementById("booking3_id");
+let edititembtn = window.document.getElementById("edit_item_btn");
+let backgradientimg = window.document.getElementById("user_image");
+let updateitemnamebox = window.document.getElementById("update_items");
 
 // vendor back button event
-backbtn.addEventListener("click",function()
+var i;
+for(i=0;i<backbtn.length;i++){
+backbtn[i].addEventListener("click",function()
 {
      // vendor three button styles
      buttons.style.display="block";
@@ -24,7 +29,7 @@ backbtn.addEventListener("click",function()
      // vendor update styles
      buttons3.style.display="none";
 })
-
+}
 // vendor add button event
 addbutton.addEventListener("click",function()
 {
@@ -69,5 +74,10 @@ darkmode.addEventListener("click",function()
           bookingbox2.style.border="2px";
           bookingbox3.style.border="2px";
      }
+})
+
+edititembtn.addEventListener("click",function(){
+updateitemnamebox.style.display="block";
+// backgradientimg.style.filter="brightness(40%)";
 })
 

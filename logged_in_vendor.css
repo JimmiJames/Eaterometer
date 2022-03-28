@@ -124,10 +124,24 @@
     transition: 1s;
 }
 
-#backbutton{
+#update_items{
+    display:none;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 560px;
+    margin-top: -266px;
+    transition: 1s;
+}
+
+.backbutton{
     transform: rotate(180deg);
     width: 2.8%;
-    margin-left: 824px;
+    margin-top: -48px;
+    margin-left: -48px;
     position: absolute;
 }
 
@@ -140,8 +154,12 @@
     height: 28px;
 }
 
-#backbutton:hover{
+.backbutton:hover{
     background-color: silver;
+}
+
+#edit_item_btn{
+    margin-left: 74px;
 }
 
 /* ---------------------------- */

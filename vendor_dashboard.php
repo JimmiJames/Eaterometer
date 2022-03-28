@@ -52,7 +52,6 @@
 
         <!-- vendor functions -->
         <div id="fourbtn">
-            <img id="backbutton" src="https://www.freeiconspng.com/uploads/arrow-icon-28.png" alt="">
             <div id="btn">
                 <button id="add">
                     ADD +
@@ -71,6 +70,43 @@
         //UPDATE
         require("vendor_update_details.php");
         ?>
+        </div>
+
+        <div id="update_items">
+            <h3>EDIT ITEM NAME</h3>
+            <br><br>
+            Item Name
+            &nbsp;&nbsp;
+            <br>
+            <select name="items" id="selected_item">
+
+                            <option value="">Select Item:</option>
+                            <?php
+                                $results=mysqli_query($conn,  "SELECT * FROM slot_mgt");
+                                //loop
+                                foreach ($results as $slot){
+                            ?>
+                            <option value="<?php echo $slot["allotted_item_name"];?>">
+                                <?php echo $slot["allotted_item_name"];?>
+                            </option id="vendor_option" name="vendor_option_select">
+                         
+                            <?php
+                            }
+                            foreach($results as $slot)
+                            {
+                                echo $slot["vendor_option_select"];
+
+                            }
+                            
+
+                            ?>
+                    
+                    </select>
+                    <br><br>
+                    TO
+                    <input type="text" name="changed_item_name" id="">
+                    <br><br>
+                    <input type="button" value="Confirm">
         </div>
     </div>
 </body>

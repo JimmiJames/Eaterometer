@@ -13,6 +13,8 @@
 <body>
      <!-- UPDATE -->
     <div id="updatebtnback">
+    <img class="backbutton" src="https://www.freeiconspng.com/uploads/arrow-icon-28.png" alt="">
+
             <h2>UPDATE</h2>
             <br>
             <form action="slot_mgt.php" method="get">
@@ -55,7 +57,7 @@
                     
                     </select>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" value="Edit items">
+                    <input type="button" value="Edit items" id="edit_item_btn">
                     <br><br>
                     <label>Price</label>
                     &nbsp;
@@ -63,13 +65,23 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="button" value="Get Price" name="getprice">
                     <br><br>
+                    <label>Slot Time</label>&nbsp;
+                <select name="slot_time">
+                    <option value="">Select Slot :</option>
 
-                    <label for="start">Start time:</label>
-                    <input type="time" id="start" name="start">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <label for="end">End time:</label>
-                    <input type="time" id="end" name="end">
-                    <br><br>
+                    <?php
+                $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                //loop
+                foreach ($results2 as $slot){
+            ?>
+                    <option value="<?php echo $slot["slot_time"];?>">
+                        <?php echo $slot["slot_time"];?>
+                    </option>
+                    <?php
+                }
+            ?>
+                </select>
+                <br><br>
                     <input type="submit" name="update" value="Update">
                </div>
                 </form>   
