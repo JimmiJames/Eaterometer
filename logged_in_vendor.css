@@ -207,27 +207,27 @@
 
 
 #iconedititem{
-    position: relative;
-    left: 209px;
-    top: -43px;
+    position: absolute;
+    margin-left: 209px;
+    margin-top: -43px;
     display: block;
     width: 30px;
     height: 30px;
   }
 
   #iconeditprice{
-    position: relative;
-    left: 209px;
-    top: -43px;
+    position: absolute;
+    margin-left: 209px;
+    margin-top: -43px;
     display: block;
     width: 30px;
     height: 30px;
   }
 
   #iconedittime{
-    position: relative;
-    left: 209px;
-    top: -43px;
+    position: absolute;
+    margin-left: 209px;
+    margin-top: -43px;
     display: block;
     width: 30px;
     height: 30px;
