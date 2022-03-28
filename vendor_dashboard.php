@@ -111,24 +111,25 @@
         </div>
 
         <div id="update_time">
-        <a href=""><img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error"></a>
-        <label>Slot Time</label>&nbsp;
+            <a href=""><img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error"></a>
+                <label>Slot Time</label>&nbsp;
                 <select name="slot_time">
                     <option value="">Select Slot :</option>
 
                     <?php
-                $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
-                //loop
-                foreach ($results2 as $slot){
-            ?>
-                    <option value="<?php echo $slot["slot_time"];?>">
+                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results2 as $slot)
+                    {
+                     ?>
+                      <option value="<?php echo $slot["slot_time"];?>">
                         <?php echo $slot["slot_time"];?>
-                    </option>
-                    <?php
-                }
-            ?>
+                      </option>
+                     <?php
+                    }
+                     ?>
                 </select>
-<br>
+                  <br>
                 TO
                 <br>
                 <label for="start">Start time:</label>
@@ -137,10 +138,9 @@
                     <label for="end">End time:</label>
                     <input type="time" id="end" name="end" step="1">
                 <br><br>
-
                 <input type="button" value="Confirm">
-        </div>
-    </div>
+          </div>
+     </div>
 </body>
 <script src="logged_in_vendor.js"></script>
 <!-- <script src="vendor_update.js"></script> -->

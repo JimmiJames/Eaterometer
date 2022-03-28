@@ -11,8 +11,10 @@ let bookingbox1 = window.document.getElementById("booking1_id");
 let bookingbox2 = window.document.getElementById("booking2_id");
 let bookingbox3 = window.document.getElementById("booking3_id");
 let edititembtn = window.document.getElementById("edit_item_btn");
+let edittimebtn = window.document.getElementById("edit_time_btn");
 let backgradientimg = window.document.getElementById("user_image");
 let updateitemnamebox = window.document.getElementById("update_items");
+let updatetimenamebox = window.document.getElementById("update_time");
 
 // vendor back button event
 var i;
@@ -80,4 +82,8 @@ edititembtn.addEventListener("click",function(){
 updateitemnamebox.style.display="block";
 // backgradientimg.style.filter="brightness(40%)";
 })
+
+edittimebtn.addEventListener("click",function(){
+     updatetimenamebox.style.display="block";
+     })
 

@@ -66,14 +66,13 @@
                     <input type="button" value="Get Price" name="getprice">
                     <br><br>
                     <label>Slot Time</label>&nbsp;
-                <select name="slot_time">
+                    <select name="slot_time">
                     <option value="">Select Slot :</option>
-
                     <?php
-                $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
-                //loop
-                foreach ($results2 as $slot){
-            ?>
+                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results2 as $slot){
+                    ?>
                     <option value="<?php echo $slot["slot_time"];?>">
                         <?php echo $slot["slot_time"];?>
                     </option>
@@ -81,6 +80,7 @@
                 }
             ?>
                 </select>
+                <input type="button" value="Edit time" id="edit_time_btn">
                 <br><br>
                     <input type="submit" name="update" value="Update">
                </div>
