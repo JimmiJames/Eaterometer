@@ -2,6 +2,19 @@
     margin: 0px;
     padding: 0px;
 }
+
+#add{
+    padding: 10px;
+}
+
+#view{
+    padding: 10px;
+}
+
+#update{
+    padding: 10px;
+}
+
 #backimg{
     width: 1519px;
     height: 1000px;
