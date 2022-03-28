@@ -8,9 +8,9 @@
         //     let a = '<?= $server ?>';
         // }
 
-        let vendor_price = window.document.getElementById("price");
+        // let vendor_price = window.document.getElementById("price");
 
-        let option = window.document.getElementById("vendor_option");
+        // let option = window.document.getElementById("vendor_option");
 
         // option.addEventListener("click",function()
         // {
@@ -18,4 +18,4 @@
         //          console.log("item selected");
         // })
 
-        let a = "<?= echo $results?>";
+        // let a = "<?= echo $results?>";
