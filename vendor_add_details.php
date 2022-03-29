@@ -13,12 +13,13 @@
 
 <body>
     <!-- Add -->
+
     <div id="addbtnback">
     <img class="backbutton" src="https://www.freeiconspng.com/uploads/arrow-icon-28.png" alt="">
 
         <h2>ADD</h2>
         <br>
-        <form action="slot_mgt.php" method="get">
+        
             <?php
           require("universalconnection.php");
         $results=mysqli_query($conn, "SELECT * FROM slot_mgt");
@@ -38,9 +39,9 @@
                 <label>Item</label>&nbsp;
                 <input type="text" name="item" placeholder="Enter the item" id="">
                 <br><br>
-                <input type="submit" value="Confirm">
+                <input type="submit" value="Confirm" name="">
             </div>
-        </form>
+        
     </div>
 </body>
 
