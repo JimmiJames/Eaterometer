@@ -1,5 +1,7 @@
 <!-- VENDOR UPDATE FUNCTIONALITY -->
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +26,7 @@
 
                 <?php
                     require("universalconnection.php");
-           
-        
+                    
                     $results=mysqli_query($conn, "SELECT * FROM slot_mgt");
                 ?>
 
@@ -61,7 +62,9 @@
                     <br><br>
                     <label>Price</label>
                     &nbsp;
-                    <input type="number" name="price" placeholder="Enter the price" id="vendor_price" value="<?php echo htmlentities($price_of_selected_item); ?>" />
+                    <input type="number" name="price" placeholder="Enter the price" id="vendor_price" value="<?php
+                    
+                    echo $_SESSION["price_value"]; ?>" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
                     <input type="submit" value="GET PRICE" name="updateprice" >

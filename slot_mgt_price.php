@@ -1,16 +1,20 @@
 <?php
+session_start();
+?>
+
+<?php
  require("universalconnection.php");
- $slot_time_start = $_GET['slot_time_start'];
- $slot_time_end = $_GET['slot_time_end'];
+ //$slot_time_start = $_GET['slot_time_start'];
+ //$slot_time_end = $_GET['slot_time_end'];
  $allotted_item_name = $_GET['items']; //item name from main update page
- $changed_item_name = $_GET['changed_item_name']; 
+ //$changed_item_name = $_GET['changed_item_name']; 
  $price = "1200";
 
 // ITEM NAME UPDATE SECTION
 
 $getID_query = "SELECT item_id FROM `slot_mgt` WHERE allotted_item_name = '{$allotted_item_name}'";
 
- echo $allotted_item_name;
+ //echo $allotted_item_name;
 
  $getID_result = mysqli_query($conn, $getID_query);
  $vendor_id=22;
@@ -83,7 +87,8 @@ if (isset($_GET['updateprice']))
         while($row = $result->fetch_assoc()) {
          // echo "price: " . $row["price"]. "<br>";
           $price_of_selected_item = $row["price"];
-          //echo "$price_of_selected_item";
+          $_SESSION["price_value"]=$price_of_selected_item;
+          // echo "$price_of_selected_item";
         }
       } else {
         echo "0 results";
