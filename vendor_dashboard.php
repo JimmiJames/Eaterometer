@@ -70,6 +70,7 @@
         //UPDATE
         require("vendor_update_details.php");
         ?>
+<<<<<<< HEAD
 
         <?php
         //UPDATE ITEMS
@@ -79,6 +80,50 @@
         //UPDATE TIME
         require("vendor_update_time.php");
         ?>
+=======
+        </div>
+
+        <div id="update_items">
+            <form action="slot_mgt.php" method = "get">
+             <img id="iconedititem" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
+             <h3>EDIT ITEM NAME</h3>
+             <br><br>
+             Item Name
+             &nbsp;&nbsp;
+             <br>
+             
+              <select name="edit_items_selected_items" id="selected_item">
+
+                            <option value="">Select Item:</option>
+                            <?php
+                                $results=mysqli_query($conn,  "SELECT * FROM slot_mgt");
+                                //loop
+                                foreach ($results as $slot){
+                            ?>
+                            <option value="<?php echo $slot["allotted_item_name"];?>">
+                                <?php echo $slot["allotted_item_name"];?>
+                            </option id="vendor_option" name="vendor_option_select">
+                         
+                            <?php
+                            }
+                            foreach($results as $slot)
+                            {
+                                echo $slot["vendor_option_select"];
+
+                            }
+                            //get item name from edit item buttin click and update the item name from text box
+
+                            ?>
+                    
+                    </select>
+
+                    <br><br>
+                    TO
+                    <input type="text" name="changed_item_name" id="">
+                    <br><br>
+                    <input type="submit" name="changed_item_name_btn" value="Confirm">
+            </form>
+>>>>>>> 9dd61de45eabe828244ed0b2c468ce6ebec605f2
         </div>
      </div>
 </body>
