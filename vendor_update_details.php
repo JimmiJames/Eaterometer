@@ -17,6 +17,7 @@
 
             <h2>UPDATE</h2>
             <br>
+        <form action="slot_mgt_price.php" method="get">    
             <form action="slot_mgt.php" method="get">
 
                <!-- header("location:login.php"); -->
@@ -52,19 +53,19 @@
 
                             }
                             
-                            
-
                             ?>
                     
                     </select>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" value="Edit items" name="edit_items" id="edit_item_btn">
+                    <input type="button" value="EDIT ITEMS" name="edit_items" id="edit_item_btn">
                     <br><br>
                     <label>Price</label>
                     &nbsp;
-                    <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
+                    <input type="number" name="price" placeholder="Enter the price" id="vendor_price" value="<?php echo htmlentities($price_of_selected_item); ?>" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" value="Get Price" name="getprice" id="edit_price_btn">
+                        <!-- <form action="slot_mgt_price.php" method="get"> -->
+                    <input type="submit" value="GET PRICE" name="updateprice" >
+                        
                     <br><br>
                     <label>Slot Time</label>&nbsp;
                     <select name="slot_time">
@@ -83,9 +84,11 @@
                 </select>
                 <input type="button" value="Edit time" id="edit_time_btn">
                 <br><br>
-                    <input type="submit" name="update" value="Update">
+                
+                    <input type="submit" name="update" value="Update" id="update_form">
                </div>
-                </form>   
+                </form>
+        </form>   
      </div>
 </body>
 <script src="jquery.main.js" type="text/javascript"></script>
