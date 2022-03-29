@@ -57,7 +57,7 @@
                     
                     </select>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" value="Edit items" id="edit_item_btn">
+                    <input type="button" value="Edit items" name="edit_items" id="edit_item_btn">
                     <br><br>
                     <label>Price</label>
                     &nbsp;
