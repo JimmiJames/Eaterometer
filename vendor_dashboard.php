@@ -70,17 +70,6 @@
         //UPDATE
         require("vendor_update_details.php");
         ?>
-<<<<<<< HEAD
-
-        <?php
-        //UPDATE ITEMS
-        require("vendor_update_items.php");
-        //UPDATE PRICE
-        require("vendor_update_price.php");
-        //UPDATE TIME
-        require("vendor_update_time.php");
-        ?>
-=======
         </div>
 
         <div id="update_items">
@@ -123,8 +112,50 @@
                     <br><br>
                     <input type="submit" name="changed_item_name_btn" value="Confirm">
             </form>
->>>>>>> 9dd61de45eabe828244ed0b2c468ce6ebec605f2
         </div>
+
+        
+        <div id="update_time">
+            <img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
+                <label>Slot Time</label>&nbsp;
+                <select name="slot_time">
+                    <option value="">Select Slot :</option>
+
+                    <?php
+                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results2 as $slot)
+                    {
+                     ?>
+                      <option value="<?php echo $slot["slot_time"];?>">
+                        <?php echo $slot["slot_time"];?>
+                      </option>
+                     <?php
+                    }
+                     ?>
+                </select>
+                  <br>
+                TO
+                <br>
+                <label for="start">Start time:</label>
+                    <input type="time" id="start" name="start" step="1">
+                    <br><br>
+                    <label for="end">End time:</label>
+                    <input type="time" id="end" name="end" step="1">
+                <br><br>
+                <input type="button" value="Confirm">
+          </div>
+
+          <div id="update_price">
+     <img id="iconeditprice" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
+       <label>Old Price</label>&nbsp;
+       <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
+       <br>
+       TO
+       <br>
+       <label>New Price</label>&nbsp;
+      <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
+    </div>
      </div>
 </body>
 <script src="logged_in_vendor.js"></script>
