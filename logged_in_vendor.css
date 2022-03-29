@@ -208,6 +208,12 @@
     background-color: silver;
 }
 
+#edit_price_btn{
+    margin-top: -36px;
+    margin-left: -59px;
+    position: absolute;
+}
+
 #edit_item_btn{
     margin-left: 74px;
 }

@@ -81,7 +81,7 @@
              &nbsp;&nbsp;
              <br>
              
-              <select name="edit_items_selected_items" id="selected_item">
+              <select name="items" id="selected_item">
 
                             <option value="">Select Item:</option>
                             <?php
@@ -114,7 +114,7 @@
             </form>
         </div>
 
-        
+
         <div id="update_time">
             <img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
                 <label>Slot Time</label>&nbsp;
@@ -146,7 +146,8 @@
                 <input type="button" value="Confirm">
           </div>
 
-          <div id="update_price">
+          <!-- <div id="update_price">
+            <form action = "slot_mgt.php" method="get">
      <img id="iconeditprice" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
        <label>Old Price</label>&nbsp;
        <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
@@ -154,8 +155,11 @@
        TO
        <br>
        <label>New Price</label>&nbsp;
-      <input type="number" name="price" placeholder="Enter the price" id="vendor_price">
-    </div>
+      <input type="number" name="edit_price" placeholder="Enter the price" id="vendor_edit_price">
+      <br><br>
+      <input type="submit" value= "confirm" name = "price_change_btn">
+            </form>
+    </div> -->
      </div>
 </body>
 <script src="logged_in_vendor.js"></script>
