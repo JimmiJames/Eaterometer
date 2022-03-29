@@ -92,7 +92,7 @@
                             <option value="<?php echo $slot["allotted_item_name"];?>">
                                 <?php echo $slot["allotted_item_name"];?>
                             </option id="vendor_option" name="vendor_option_select">
-                         
+                        
                             <?php
                             }
                             foreach($results as $slot)

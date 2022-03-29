@@ -2,7 +2,7 @@
  require("universalconnection.php");
  $slot_time_start = $_GET['slot_time_start'];
  $slot_time_end = $_GET['slot_time_end'];
- $allotted_item_name = $_GET['edit_items_selected_items']; //item name from main update page
+ $allotted_item_name = $_GET['items']; //item name from main update page
  $changed_item_name = $_GET['changed_item_name']; 
  $price = "1200";
 
