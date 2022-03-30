@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<form action="slot_mgt.php" method="get">
     <div id="update_time">
         <img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
             <label>Slot Time</label>&nbsp;
@@ -35,7 +36,9 @@
                 <label for="end">End time:</label>
                 <input type="time" id="end" name="end" step="1">
             <br><br>
-            <input type="button" value="Confirm">
-      </div>
+            <input type="submit" name="time_edit" value="Confirm">
+            </form>
+          </div>
+
 </body>
 </html>

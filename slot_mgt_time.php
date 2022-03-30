@@ -1,10 +1,8 @@
 <?php
-sesssion_start();
  require("universalconnection.php");
- $slot_time_start = $_GET['slot_time_start'];
- $slot_time_end = $_GET['slot_time_end'];
+ $slot_time_start = $_GET['start'];
+ $slot_time_end = $_GET['end'];
  $allotted_item_name = $_GET['items']; //item name from main update page
- $_SESSION['allotted_item_name'] = $allotted_item_name;
  $changed_item_name = $_GET['changed_item_name']; 
  $price = "1200";
 
@@ -33,7 +31,7 @@ sesssion_start();
 //session_start();
 
 
-     if(isset($_GET['changed_item_name_btn']) == 'EDIT ITEM')
+     if(isset($_GET['edit_time']) == 'Confirm')
      {
           
          //$sql = "UPDATE `slot_mgt` set allotted_item_name = '{$changed_item_name}' where allotted_item_name = '{$allotted_item_name}'"; 
@@ -44,15 +42,16 @@ sesssion_start();
 
 
 
-        $sql = "UPDATE `slot_mgt` set allotted_item_name = '$changed_item_name' where item_id = '$row_fetch_id_for_edit_item'";
+        //$sql = "UPDATE `slot_mgt` set allotted_item_name = '$changed_item_name' where item_id = '$row_fetch_id_for_edit_item'";
       
-
+        echo "$slot_time_start";
+        echo $slot_time_end;
 
         if ($conn->query($sql)==true)
         {
-          echo "Successfully added updated slot";
+          echo "Successfully added updated slot time";
           // $row = mysqli_fetch_assoc($getID_result);
-           echo $row_fetch_id_for_edit_item['item_id'];
+           //echo $row_fetch_id_for_edit_item['item_id'];
            
          
         }
@@ -64,37 +63,8 @@ sesssion_start();
      }
 
 
-  
-// if (isset($_GET['updateprice'])=='GET PRICE')
-// {
-//       //require("universalconnection.php");
-
-//       $getPrice_query = "SELECT price FROM `slot_mgt` WHERE item_id = '{$row_fetch_id_for_edit_item}'";
-//       $getPrice_result = mysqli_query($conn, $getPrice_query);
-//       $row_fetch_price = mysqli_fetch_assoc($getPrice_result);
-//       $row_fetch_price=$row_fetch_price['price']; 
-//       echo $row_fetch_price;
-//       echo $row_fetch_id_for_edit_item;
-      
-//         //$sql = "INSERT INTO slot_mgt (`item_id`,`slot_time_start`,`slot_time_end`,`Allotted_Item_Name`,`Price`,`vendor_id`) VALUES ('$item_id','$slot_time_start','$slot_time_end','$allotted_item_name','$price','$vendor_id')";
-//        // $sql2 = "INSERT INTO customer_login (`Email`,`Password`) VALUES ('$email','$password');";
-//         //$_SESSION['Uname']=$name;
-
-//         if ($conn->query($getPrice_query)===true)
-//         {
-//           echo "Successfully added updated slot";
-//           //$row = mysqli_fetch_assoc($getPrice_result);
-//           echo $row_fetch_price['price'];
-//         }
-
-//         else
-//         {
-//           echo $row_fetch_price['price'];
-//         echo "ERROR PRICE--".mysqli_error($conn);
-//         }
-// }
     
 $conn->close();
 
-// }
+
 ?>

@@ -67,7 +67,7 @@ session_start();
                     echo $_SESSION["price_value"]; ?>" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
-                    <input type="submit" value="GET PRICE" name="updateprice" >
+                    <input type="submit" value="GET PRICE" name="updateprice" id="updateprice_id" >
                         
                     <br><br>
                     <label>Slot Time</label>&nbsp;
