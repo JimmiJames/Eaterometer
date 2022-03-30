@@ -1,8 +1,8 @@
 <?php
-sesssion_start();
+// sesssion_start();
  require("universalconnection.php");
- $slot_time_start = $_GET['slot_time_start'];
- $slot_time_end = $_GET['slot_time_end'];
+ //$slot_time_start = $_GET['slot_time_start'];
+ //$slot_time_end = $_GET['slot_time_end'];
  $allotted_item_name = $_GET['items']; //item name from main update page
  $_SESSION['allotted_item_name'] = $allotted_item_name;
  $changed_item_name = $_GET['changed_item_name']; 
@@ -52,7 +52,7 @@ sesssion_start();
         {
           echo "Successfully added updated slot";
           // $row = mysqli_fetch_assoc($getID_result);
-           echo $row_fetch_id_for_edit_item['item_id'];
+         //   echo $row_fetch_id_for_edit_item['item_id'];
            
          
         }

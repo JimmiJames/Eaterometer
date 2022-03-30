@@ -148,6 +148,19 @@
     transition: 1s;
 }
 
+#updatebtnback2{
+    /* display:none; */
+    background-color: white;
+    width: 433px;
+    height: 254px;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    margin-left: 818px;
+    margin-top: 50px;
+    transition: 1s;
+}
+
 #update_items{
     display:none;
     background-color: white;

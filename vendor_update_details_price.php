@@ -1,6 +1,6 @@
 <!-- VENDOR UPDATE FUNCTIONALITY -->
 <?php
-session_start();
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ session_start();
 
 <body>
      <!-- UPDATE -->
-    <div id="updatebtnback">
+    <div id="updatebtnback2">
     <img class="backbutton" src="https://www.freeiconspng.com/uploads/arrow-icon-28.png" alt="">
 
             <h2>UPDATE</h2>
@@ -67,7 +67,7 @@ session_start();
                     echo $_SESSION["price_value"]; ?>" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
-                    <input type="submit" value="GET PRICE" name="updateprice" id="updateprice_id" >
+                    <input type="submit" value="SET PRICE" name="updateprice" id="updateprice_id" >
                         
                     <br><br>
                     <label>Slot Time</label>&nbsp;
@@ -96,6 +96,6 @@ session_start();
 </body>
 <script src="jquery.main.js" type="text/javascript"></script>
 
-<!-- <script src="logged_in_vendor.js"></script> -->
+<!-- <script src="logged_in_vendor_price.js"></script> -->
 <script src="vendor_update.js"></script>
 </html>

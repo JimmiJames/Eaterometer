@@ -112,6 +112,7 @@ if (isset($_GET['updateprice']))
           $price_of_selected_item = $row["price"];
           $_SESSION["price_value"]=$price_of_selected_item;
           //echo "$price_of_selected_item";
+          require("vendor_dashboard_price.php");
         }
       } else {
         echo "0 results";

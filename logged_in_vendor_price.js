@@ -39,27 +39,27 @@ for (i = 0; i < backbtn.length; i++) {
      })
 }
 // vendor add button event
-addbutton.addEventListener("click", function () {
-     // vendor add styles
-     buttons2.style.display = "block";
-     buttons2.style.flexDirection = "row";
+// addbutton.addEventListener("click", function () {
+//      // vendor add styles
+//      buttons2.style.display = "block";
+//      buttons2.style.flexDirection = "row";
 
-     // vendor three button styles
-     buttons.style.opacity = 0;
-     buttons.style.display = "none";
+//      // vendor three button styles
+//      buttons.style.opacity = 0;
+//      buttons.style.display = "none";
 
-})
+// })
 
 // vendor update button event
-updatebutton.addEventListener("click", function () {
-     // vendor update styles
-     buttons3.style.display = "block";
-     buttons3.style.flexDirection = "row";
+// updatebutton.addEventListener("click", function () {
+//      // vendor update styles
+//      buttons3.style.display = "block";
+//      buttons3.style.flexDirection = "row";
 
-     // vendor three button styles
-     buttons.style.opacity = 0;
-     buttons.style.display = "none";
-})
+//      // vendor three button styles
+//      buttons.style.opacity = 0;
+//      buttons.style.display = "none";
+// })
 
 darkmode.addEventListener("click", function () {
      if (vendorstat.style.backgroundColor != "black") {

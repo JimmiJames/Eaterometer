@@ -1,5 +1,9 @@
 <!-- VENDOR DASHBOARD -->
+<?php
 
+// session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +56,7 @@
 
         <!-- vendor functions -->
         <div id="fourbtn">
-            <div id="btn">
+            <!-- <div id="btn">
                 <button id="add">
                     ADD +
                 </button>
@@ -62,16 +66,16 @@
                 <button id="update">
                     UPDATE +
                 </button>
-            </div>
+            </div> -->
 
-            <?php
-        //ADD
-        require("vendor_add_details.php");
-        //UPDATE
-        require("vendor_update_details.php");
-        ?>
+            
         </div>
-
+        <?php
+        //ADD
+        //require("vendor_add_details.php");
+        //UPDATE
+        require("vendor_update_details_price.php");
+        ?>
         <div id="update_items">
             <form action="slot_mgt.php" method = "get">
              <img id="iconedititem" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
@@ -80,7 +84,7 @@
              Item Name
              &nbsp;&nbsp;
              <br>
-            
+             
               <select name="items" id="selected_item">
 
                             <option value="">Select Item:</option>
@@ -114,6 +118,7 @@
             </form>
         </div>
 
+          
     <form action="slot_mgt_time.php" method="get">
         <div id="update_time">
             <img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
@@ -162,6 +167,6 @@
     </div> -->
      </div>
 </body>
-<script src="logged_in_vendor.js"></script>
+<script src="logged_in_vendor_price.js"></script>
 <!-- <script src="vendor_update.js"></script> -->
 </html>
