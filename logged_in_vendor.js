@@ -20,6 +20,7 @@ let updatetimenamebox = window.document.getElementById("update_time");
 let updateitemcancel = window.document.getElementById("iconedititem");
 let updatepricecancel = window.document.getElementById("iconeditprice");
 let updatetimecancel = window.document.getElementById("iconedittime");
+let updatepricebtnchange = window.document.getElementById("updateprice_id");
 
 
 // vendor back button event
@@ -88,19 +89,23 @@ edittimebtn.addEventListener("click", function () {
      updatetimenamebox.style.display = "block";
 })
 
-editpricebtn.addEventListener("click", function () {
-     updatepricenamebox.style.display = "block";
-})
+// editpricebtn.addEventListener("click", function () {
+//      updatepricenamebox.style.display = "block";
+// })
 
 updateitemcancel.addEventListener("click",function(){
      updateitemnamebox.style.display = "none";
 })
 
-updatepricecancel.addEventListener("click",function(){
-     updatepricenamebox.style.display = "none";
-})
+// updatepricecancel.addEventListener("click",function(){
+//      updatepricenamebox.style.display = "none";
+// })
 
 updatetimecancel.addEventListener("click",function(){
      updatetimenamebox.style.display = "none";
+})
+
+updatepricebtnchange.addEventListener("click",function(){
+     updatepricebtnchange.value="Set Price";
 })
 

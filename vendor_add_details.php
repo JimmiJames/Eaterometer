@@ -19,11 +19,7 @@
 
         <h2>ADD</h2>
         <br>
-<<<<<<< HEAD
         <!-- <form action="slot_mgt.php" method="get"> -->
-=======
-        
->>>>>>> 9dd61de45eabe828244ed0b2c468ce6ebec605f2
             <?php
           require("universalconnection.php");
         $results=mysqli_query($conn, "SELECT * FROM slot_mgt");
@@ -45,11 +41,7 @@
                 <br><br>
                 <input type="submit" value="Confirm" name="">
             </div>
-<<<<<<< HEAD
         <!-- </form> -->
-=======
-        
->>>>>>> 9dd61de45eabe828244ed0b2c468ce6ebec605f2
     </div>
 </body>
 

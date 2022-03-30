@@ -10,9 +10,9 @@ session_start();
  //$changed_item_name = $_GET['changed_item_name']; 
  $price = "1200";
 
-// ITEM NAME UPDATE SECTION
+ // ITEM NAME UPDATE SECTION
 
-$getID_query = "SELECT item_id FROM `slot_mgt` WHERE allotted_item_name = '{$allotted_item_name}'";
+ $getID_query = "SELECT item_id FROM `slot_mgt` WHERE allotted_item_name = '{$allotted_item_name}'";
 
  //echo $allotted_item_name;
 
@@ -65,7 +65,30 @@ $getID_query = "SELECT item_id FROM `slot_mgt` WHERE allotted_item_name = '{$all
     //     echo "ERROR UPDATE ITEM NAME".mysqli_error($conn);
     //     }
     //  }
+if (isset($_GET['update']))
+{
 
+
+  
+    //$sql = "UPDATE `slot_mgt` set allotted_item_name = '$changed_item_name', set price = '$price_of_selected_item' where item_id = '$row_fetch_id_for_edit_item'";
+    //$sql = "UPDATE `slot_mgt` (allotted_item_name, price) VALUES ('$changed_item_name', '$price_of_selected_item')";
+    $sql = "UPDATE `slot_mgt` SET allotted_item_name='$changed_item_name',price='$price_of_selected_item' WHERE item_id='$row_fetch_id_for_edit_item'";
+    
+    if ($conn->query($sql)==true)
+        {
+          echo "Successfully added updated slot";
+          // $row = mysqli_fetch_assoc($getID_result);
+           echo $row_fetch_id_for_edit_item['item_id'];
+           
+         
+        }
+
+        else
+        {
+        echo "ERROR UPDATE ITEM NAME".mysqli_error($conn);
+        }
+
+}
 
   
 if (isset($_GET['updateprice']))
@@ -88,7 +111,7 @@ if (isset($_GET['updateprice']))
          // echo "price: " . $row["price"]. "<br>";
           $price_of_selected_item = $row["price"];
           $_SESSION["price_value"]=$price_of_selected_item;
-          // echo "$price_of_selected_item";
+          //echo "$price_of_selected_item";
         }
       } else {
         echo "0 results";
