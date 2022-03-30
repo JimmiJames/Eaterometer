@@ -14,7 +14,7 @@ session_start();
 
  $getID_query = "SELECT item_id FROM `slot_mgt` WHERE allotted_item_name = '{$allotted_item_name}'";
 
- //echo $allotted_item_name;
+ //echo "$allotted_item_name";
 
  $getID_result = mysqli_query($conn, $getID_query);
  $vendor_id=22;
@@ -65,21 +65,43 @@ session_start();
     //     echo "ERROR UPDATE ITEM NAME".mysqli_error($conn);
     //     }
     //  }
-if (isset($_GET['update']))
+if (isset($_GET['update_new_price']))
 {
 
 
+
+  $sql_price = "SELECT price FROM `slot_mgt` WHERE item_id = '{$row_fetch_id_for_edit_item}'";
+     
+      $result = $conn->query($sql_price);
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+         // echo "price: " . $row["price"]. "<br>";
+          $price_of_selected_item = $row["price"];
+          $_SESSION["price_value"]=$price_of_selected_item;
+          $_SESSION["item_selected"] =$allotted_item_name;
+          echo "$price_of_selected_item";
+        }
+      } else {
+        echo "0 results";
+      }
   
     //$sql = "UPDATE `slot_mgt` set allotted_item_name = '$changed_item_name', set price = '$price_of_selected_item' where item_id = '$row_fetch_id_for_edit_item'";
     //$sql = "UPDATE `slot_mgt` (allotted_item_name, price) VALUES ('$changed_item_name', '$price_of_selected_item')";
-    $sql = "UPDATE `slot_mgt` SET allotted_item_name='$changed_item_name',price='$price_of_selected_item' WHERE item_id='$row_fetch_id_for_edit_item'";
+    //$sql = "UPDATE `slot_mgt` SET allotted_item_name='$changed_item_name',price='$price_of_selected_item' WHERE item_id='$row_fetch_id_for_edit_item'";
     
-    if ($conn->query($sql)==true)
+    $sql = 
+    "UPDATE `slot_mgt` SET price=$price_of_selected_item WHERE item_id=$row_fetch_id_for_edit_item";
+
+    //echo $row_fetch_id_for_edit_item['item_id'];
+           
+    if ($conn->query($sql)==true&&$conn->query($sql_price)==true)
         {
           echo "Successfully added updated slot";
           // $row = mysqli_fetch_assoc($getID_result);
-           echo $row_fetch_id_for_edit_item['item_id'];
-           
+           echo $row_fetch_id_for_edit_item;
+           echo "$price_of_selected_item";
          
         }
 
@@ -96,13 +118,7 @@ if (isset($_GET['updateprice']))
       //require("universalconnection.php");
 
       $sql = "SELECT price FROM `slot_mgt` WHERE item_id = '{$row_fetch_id_for_edit_item}'";
-      //$getPrice_result = mysqli_query($conn, $getPrice_query);
-      //$row_fetch_price = mysqli_fetch_assoc($getPrice_result);
-      //$row_fetch_price=$row_fetch_price['price']; 
-      //echo $row_fetch_price;
-      //echo ".$row_fetch_id_for_edit_item.";
-      
-
+     
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
@@ -114,6 +130,12 @@ if (isset($_GET['updateprice']))
           //echo "$price_of_selected_item";
           require("vendor_dashboard_price.php");
         }
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+            // echo "price: " . $row["price"]. "<br>";
+            $price_of_selected_item = $row["price"];
+            echo "$price_of_selected_item";
+          }
       } else {
         echo "0 results";
       }

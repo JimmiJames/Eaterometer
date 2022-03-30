@@ -63,6 +63,10 @@
     margin-top: -177px;
 }
 
+#vendor_price_edit{
+    display: none;
+}
+
 #name{
     font-size: large;
     font-weight: bolder;

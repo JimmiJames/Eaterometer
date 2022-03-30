@@ -20,7 +20,9 @@ let updatetimenamebox = window.document.getElementById("update_time");
 let updateitemcancel = window.document.getElementById("iconedititem");
 let updatepricecancel = window.document.getElementById("iconeditprice");
 let updatetimecancel = window.document.getElementById("iconedittime");
-let updatepricebtnchange = window.document.getElementById("updateprice_id");
+let updatepricegetitembtn = window.document.getElementById("updateprice_id");
+let updatepricegetitembox = window.document.getElementById("vendor_price");
+let updatepricegetitemboxchange = window.document.getElementById("vendor_price_edit");
 
 
 // vendor back button event
@@ -103,5 +105,12 @@ updateitemcancel.addEventListener("click",function(){
 
 updatetimecancel.addEventListener("click",function(){
      updatetimenamebox.style.display = "none";
+})
+
+updatepricegetitembtn.addEventListener("click",function()
+{
+     updatepricegetitembox.style.display="none";
+     updatepricegetitemboxchange.style.display="inline";
+     updatepricegetitembtn.value="Change price";
 })
 

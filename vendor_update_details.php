@@ -63,8 +63,8 @@ session_start();
                     <label>Price</label>
                     &nbsp;
                     <input type="number" name="price" placeholder="Enter the price" id="vendor_price" value="<?php
-                    
-                    echo $_SESSION["price_value"]; ?>" />
+                    //for slot_mgt_price line 82
+                    echo $_SESSION["price_value"]; ?>" /> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
                     <input type="submit" value="GET PRICE" name="updateprice" id="updateprice_id" >
