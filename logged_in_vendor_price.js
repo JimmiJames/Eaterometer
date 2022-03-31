@@ -113,7 +113,7 @@ updatepricegetitembtn.addEventListener("click",function()
 {
      updatepricegetitembox.style.display="none";
      updatepricegetitemboxchange.style.display="inline";
-     updatepricegetitembtn.value="CHANGE PRICE";
+     updatepricegetitembtn.style.display="none";
      updatepricegetitemcancelbtn.style.display="inline";
 })
 
@@ -121,5 +121,6 @@ updatepricegetitemcancelbtn.addEventListener("click",function(){
      updatepricegetitembox.style.display="inline";
      updatepricegetitemboxchange.style.display="none";
      updatepricegetitemcancelbtn.style.display="none";
+     updatepricegetitembtn.style.display="inline";
      updatepricegetitembtn.value="NEW PRICE";
 })
