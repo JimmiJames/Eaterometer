@@ -21,6 +21,8 @@ let updateitemcancel = window.document.getElementById("iconedititem");
 let updatepricecancel = window.document.getElementById("iconeditprice");
 let updatetimecancel = window.document.getElementById("iconedittime");
 let updatepricebtnchange = window.document.getElementById("updateprice_id");
+let select_tag_id = window.document.getElementById("selected_item");
+//let select_item_option = window.document.getElementById("select_item_value");
 
 
 // vendor back button event
@@ -110,5 +112,9 @@ updateitemcancel.addEventListener("click",function(){
 
 updatetimecancel.addEventListener("click",function(){
      updatetimenamebox.style.display = "none";
+})
+
+select_tag_id.addEventListener("change",function(){
+     updatepricebtnchange.style.display="inline";
 })
 

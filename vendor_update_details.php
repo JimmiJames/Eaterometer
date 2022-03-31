@@ -1,6 +1,6 @@
 <!-- VENDOR UPDATE FUNCTIONALITY -->
 <?php
-session_start();
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,10 +68,10 @@ session_start();
                     echo $_SESSION["price_value"];} ?>" disabled> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
-                    <input type="submit" value="GET PRICE" name="updateprice" id="updateprice_id" >
+                    <input type="submit" value="GET PRICE" name="updateprice" id="updateprice_id">
                         
                     <br><br>
-                    <label>Slot Time</label>&nbsp;
+                    <label>Slot Start Time</label>&nbsp;
                     <select name="slot_time">
                     <option value="">Select Slot :</option>
                     <?php
@@ -86,7 +86,25 @@ session_start();
                 }
             ?>
                 </select>
-                <input type="button" value="Edit time" id="edit_time_btn">
+<br><br>
+                <label>Slot End Time</label>&nbsp;
+                    <select name="slot_time">
+                    <option value="">Select Slot :</option>
+                    <?php
+                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results2 as $slot){
+                    ?>
+                    <option value="<?php echo $slot["slot_time"];?>">
+                        <?php echo $slot["slot_time"];?>
+                    </option>
+                    <?php
+                }
+            ?>
+                </select>
+
+                
+                <input type="button" value="EDIT TIME" id="edit_time_btn">
                 <br><br>
                 
                     <input type="submit" name="update" value="Update" id="update_form">

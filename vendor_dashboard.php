@@ -1,5 +1,13 @@
 <!-- VENDOR DASHBOARD -->
-
+<?php
+// session_start();
+?>
+<?php
+// if($_SESSION['Email']==false)
+// {
+//     header("location:index.html");
+// }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +57,7 @@
                     Dark mode
                 </button>
         </div>
-
+   </div>
         <!-- vendor functions -->
         <div id="fourbtn">
             <div id="btn">
@@ -65,16 +73,16 @@
             </div>
 
             <?php
-        //ADD
-        require("vendor_add_details.php");
-        //UPDATE
-        require("vendor_update_details.php");
-        ?>
+            //ADD
+            require("vendor_add_details.php");
+            //UPDATE
+            require("vendor_update_details.php");
+            ?>
         </div>
 
         <div id="update_items">
             <form action="slot_mgt.php" method = "get">
-             <img id="iconedititem" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
+             <img id="iconedititem" src="img\black-cross-transparent-background-21.png" alt="error">
              <h3>EDIT ITEM NAME</h3>
              <br><br>
              Item Name
@@ -83,7 +91,7 @@
             
               <select name="items" id="selected_item">
 
-                            <option value="">Select Item:</option>
+                            <option value="" id="select_item_value">Select Item:</option>
                             <?php
                                 $results=mysqli_query($conn,  "SELECT * FROM slot_mgt");
                                 //loop
@@ -112,11 +120,11 @@
                     <br><br>
                     <input type="submit" name="changed_item_name_btn" value="Confirm">
             </form>
-        </div>
+     </div>
 
     <form action="slot_mgt_time.php" method="get">
         <div id="update_time">
-            <img id="iconedittime" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
+            <img id="iconedittime" src="img\black-cross-transparent-background-21.png" alt="error">
                 <label>Slot Time</label>&nbsp;
                 <select name="slot_time">
                     <option value="">Select Slot :</option>
@@ -144,8 +152,8 @@
                     <input type="time" id="end" name="end" step="1">
                 <br><br>
                 <input type="submit" name="edit_time" value="Confirm">
-          </div>
-                </form>
+        </div>
+    </form>
           <!-- <div id="update_price">
             <form action = "slot_mgt.php" method="get">
      <img id="iconeditprice" src="https://img.search.brave.com/V5BTpzxDXvGP1nu1KCiGgjIaX_dNupJEN4vfIVSASQA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/eTdaYk9UMXVhSFUx/M21sVHl0OU93SGFI/YSZwaWQ9QXBp" alt="error">
@@ -160,7 +168,7 @@
       <input type="submit" value= "confirm" name = "price_change_btn">
             </form>
     </div> -->
-     </div>
+     <!-- </div> -->
 </body>
 <script src="logged_in_vendor.js"></script>
 <!-- <script src="vendor_update.js"></script> -->

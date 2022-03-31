@@ -1,5 +1,6 @@
 <?php
   require("universalconnection.php");
+  session_start();
 ?>
 
 <?php 
@@ -7,7 +8,7 @@
 // include "db_conn.php";
 
 if (isset($_POST['Email']) && isset($_POST['Password'])) 
-{
+{   
     function validate($data)
     {
       $data = trim($data);
@@ -35,7 +36,8 @@ if (isset($_POST['Email']) && isset($_POST['Password']))
         {
           $sql = "SELECT * FROM customer_login WHERE Email='$email' AND Password ='$password'";
           $result = mysqli_query($conn, $sql);
-          
+          $_SESSION['Email']=$email;
+
           if (mysqli_num_rows($result) === 1) 
           {
             $row = mysqli_fetch_assoc($result);
@@ -64,8 +66,6 @@ if (isset($_POST['Email']) && isset($_POST['Password']))
 }
 else
 {
-    echo "Error please visit official page<br>";
-    echo "<a href ='index.html'>Eaterometer</a>";
     exit();
 }
 

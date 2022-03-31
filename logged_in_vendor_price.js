@@ -20,7 +20,8 @@ let updatetimenamebox = window.document.getElementById("update_time");
 let updateitemcancel = window.document.getElementById("iconedititem");
 let updatepricecancel = window.document.getElementById("iconeditprice");
 let updatetimecancel = window.document.getElementById("iconedittime");
-let updatepricegetitembtn = window.document.getElementById("updateprice_id");
+let updatepricegetitembtn = window.document.getElementById("updateprice_id2");
+let updatepricegetitemcancelbtn = window.document.getElementById("updateprice_id3");
 let updatepricegetitembox = window.document.getElementById("vendor_price");
 let updatepricegetitemboxchange = window.document.getElementById("vendor_price_edit");
 
@@ -30,14 +31,8 @@ var i;
 for (i = 0; i < backbtn.length; i++) {
      backbtn[i].addEventListener("click", function () {
           // vendor three button styles
-          buttons.style.display = "block";
-          buttons.style.opacity = 1;
-
-          // vendor add styles
-          buttons2.style.display = "none";
-
-          // vendor update styles
-          buttons3.style.display = "none";
+          
+     window.open("http://localhost/vendor_dashboard.php","_blank");
      })
 }
 // vendor add button event
@@ -71,14 +66,21 @@ darkmode.addEventListener("click", function () {
           bookingbox1.style.border = "2px solid white";
           bookingbox2.style.border = "2px solid white";
           bookingbox3.style.border = "2px solid white";
+          darkmode.style.color="black";
+          darkmode.style.backgroundColor="white";
+          darkmode.innerHTML="White mode";
      }
      else {
-          vendorstat.style.backgroundColor = "none";
+          vendorstat.style.background = "rgba(255, 255, 255, 0.2)";
           vendorstat.style.transition = "0.4s";
+          vendorstat.style.boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)";
           vendorstat.style.color = "black";
           bookingbox1.style.border = "2px";
           bookingbox2.style.border = "2px";
           bookingbox3.style.border = "2px";
+          darkmode.style.color="white";
+          darkmode.style.backgroundColor="black";
+          darkmode.innerHTML="Dark mode";
      }
 })
 
@@ -111,6 +113,13 @@ updatepricegetitembtn.addEventListener("click",function()
 {
      updatepricegetitembox.style.display="none";
      updatepricegetitemboxchange.style.display="inline";
-     updatepricegetitembtn.value="Change price";
+     updatepricegetitembtn.value="CHANGE PRICE";
+     updatepricegetitemcancelbtn.style.display="inline";
 })
 
+updatepricegetitemcancelbtn.addEventListener("click",function(){
+     updatepricegetitembox.style.display="inline";
+     updatepricegetitemboxchange.style.display="none";
+     updatepricegetitemcancelbtn.style.display="none";
+     updatepricegetitembtn.value="NEW PRICE";
+})

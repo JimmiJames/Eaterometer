@@ -95,6 +95,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #user_image{
+    filter: drop-shadow(2px 4px 6px black);
     border-radius: 50%;
     width: 15%;
     position: relative;
@@ -178,8 +179,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     border-radius: 5px;
-    margin-left: 818px;
-    margin-top: 400px;
+    margin-left: 911px;
+    margin-top: 40px;
 
     background: rgba(255, 255, 255, 0.01);
 backdrop-filter: blur(5.6px);
@@ -194,9 +195,12 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     border-radius: 5px;
-    margin-left: 818px;
-    margin-top: 400px;
+    margin-left: 911px;
+    margin-top: 40px;
     transition: 1s;
+    background: rgba(255, 255, 255, 0.01);
+backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 #updatebtnback{
@@ -206,9 +210,12 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
     border-radius: 5px;
-    margin-left: 818px;
-    margin-top: 400px;
+    margin-left: 911px;
+    margin-top: 40px;
     transition: 1s;
+    background: rgba(255, 255, 255, 0.01);
+backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 #updatebtnback2{
@@ -221,6 +228,9 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     margin-left: 818px;
     margin-top: 400px;
     transition: 1s;
+    background: rgba(255, 255, 255, 0.01);
+backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 #update_items{
@@ -232,7 +242,40 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 5px;
     margin-left: 560px;
     margin-top: -266px;
-    transition: 1s;
+    background: rgba(255, 255, 255, 0.01);
+backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+#updateprice_id{
+    display: none;
+    position: absolute;
+    border-radius: 28px;
+    border-width: 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+#updateprice_id2{
+    /* display: none; */
+    position: absolute;
+    border-radius: 28px;
+    border-width: 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+#updateprice_id3{
+    display: none;
+    position: absolute;
+    border-radius: 28px;
+    border-width: 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: -4px;
+    margin-left: 130px;
 }
 
 #update_price{
@@ -244,7 +287,9 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 5px;
     margin-left: 560px;
     margin-top: -266px;
-    transition: 1s;
+    background: rgba(255, 255, 255, 0.01);
+backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 #update_time{
@@ -256,12 +301,14 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     border-radius: 5px;
     margin-left: 560px;
     margin-top: -266px;
-    transition: 1s;
+    background: rgba(255, 255, 255, 0.01);
+backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .backbutton{
     transform: rotate(180deg);
-    width: 2.8%;
+    width: 6.8%;
     margin-top: -48px;
     margin-left: -48px;
     position: absolute;
@@ -308,14 +355,30 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     margin-top: -36px;
     margin-left: -59px;
     position: absolute;
+    border-radius: 28px;
+    border-width: 0px;
+    padding: 8px;
+    cursor: pointer;
 }
 
 #edit_item_btn{
-    margin-left: 74px;
+    margin-left: 79px;
+    position: absolute;
+    border-radius: 28px;
+    border-width: 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: -4px;
 }
 
 #edit_time_btn{
     margin-left: 22px;
+    position: absolute;
+    border-radius: 28px;
+    border-width: 0px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: -5px;
 }
 
 
@@ -327,6 +390,8 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     width: 30px;
     height: 30px;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 4px;
   }
 
   #iconeditprice{
@@ -337,7 +402,8 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     width: 30px;
     height: 30px;
     cursor: pointer;
-
+    border-radius: 10px;
+    padding: 4px;
   }
 
   #iconedittime{
@@ -348,18 +414,24 @@ border: 1px solid rgba(255, 255, 255, 0.28);
     width: 30px;
     height: 30px;
     cursor: pointer;
+    border-radius: 10px;
+    padding: 4px;
   }
 
 #iconedititem:hover{
-    filter: brightness(73%);
+    background-color: silver;
+    color: white;
+    transition: 0.5s;
 }
 
 #iconeditprice:hover{
-    filter: brightness(73%);
+    background-color: silver;
+    transition: 0.5s;
 }
 
 #iconedittime:hover{
-    filter: brightness(73%);
+    background-color: silver;
+    transition: 0.5s;
 }
 
 /* ---------------------------- */

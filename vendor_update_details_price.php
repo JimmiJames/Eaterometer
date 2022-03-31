@@ -19,6 +19,7 @@
 
             <h2>UPDATE</h2>
             <br>
+            <form action="slot_mgt.php" method="get">
         <form action="slot_mgt_price.php" method="get">    
             <form action="slot_mgt.php" method="get">
 
@@ -69,10 +70,27 @@
                     <input type="number" name="price_edit" placeholder="Enter the new price" id="vendor_price_edit" value="" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
-                    <input type="button" value="NEW PRICE" name="update_new_price" id="updateprice_id" >
+                    <input type="button" value="NEW PRICE" name="update_new_price" id="updateprice_id2" >
+                    <input type="button" value="CANCEL" name="update_new_price" id="updateprice_id3" >
                         
                     <br><br>
-                    <label>Slot Time</label>&nbsp;
+                    <label>Slot Start Time</label>&nbsp;
+                    <select name="slot_time">
+                    <option value="">Select Slot :</option>
+                    <?php
+                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    //loop
+                    foreach ($results2 as $slot){
+                    ?>
+                    <option value="<?php echo $slot["slot_time"];?>">
+                        <?php echo $slot["slot_time"];?>
+                    </option>
+                    <?php
+                }
+            ?>
+                </select>
+<br><br>
+                <label>Slot End Time</label>&nbsp;
                     <select name="slot_time">
                     <option value="">Select Slot :</option>
                     <?php
@@ -93,7 +111,8 @@
                     <input type="submit" name="update" value="Update" id="update_form">
                </div>
                 </form>
-        </form>   
+        </form> 
+            </form>  
      </div>
 </body>
 <script src="jquery.main.js" type="text/javascript"></script>
