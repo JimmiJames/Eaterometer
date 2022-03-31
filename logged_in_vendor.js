@@ -30,7 +30,7 @@ for (i = 0; i < backbtn.length; i++) {
           // vendor three button styles
           buttons.style.display = "block";
           buttons.style.opacity = 1;
-
+          buttons.style.transition="1s";
           // vendor add styles
           buttons2.style.display = "none";
 
@@ -69,14 +69,21 @@ darkmode.addEventListener("click", function () {
           bookingbox1.style.border = "2px solid white";
           bookingbox2.style.border = "2px solid white";
           bookingbox3.style.border = "2px solid white";
+          darkmode.style.color="black";
+          darkmode.style.backgroundColor="white";
+          darkmode.innerHTML="White mode";
      }
      else {
-          vendorstat.style.backgroundColor = "white";
+          vendorstat.style.background = "rgba(255, 255, 255, 0.2)";
           vendorstat.style.transition = "0.4s";
+          vendorstat.style.boxShadow="0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%)";
           vendorstat.style.color = "black";
           bookingbox1.style.border = "2px";
           bookingbox2.style.border = "2px";
           bookingbox3.style.border = "2px";
+          darkmode.style.color="white";
+          darkmode.style.backgroundColor="black";
+          darkmode.innerHTML="Dark mode";
      }
 })
 

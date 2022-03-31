@@ -62,11 +62,11 @@
                     <br><br>
                     <label>Price</label>
                     &nbsp;
-                    <input type="number" name="price" placeholder="Enter the price" id="vendor_price" value="<?php
+                    <input type="number" name="price" placeholder="Click get price" id="vendor_price" value="<?php
                     
-                    echo $_SESSION["price_value"]; ?>" />
+                    echo $_SESSION["price_value"]; ?>" disabled/>
 
-                    <input type="number" name="price_edit" placeholder="Enter the price" id="vendor_price_edit" value="" />
+                    <input type="number" name="price_edit" placeholder="Enter the new price" id="vendor_price_edit" value="" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
                     <input type="button" value="NEW PRICE" name="update_new_price" id="updateprice_id" >

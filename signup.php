@@ -52,14 +52,14 @@ else
         $sql2 = "INSERT INTO customer_login (`Email`,`Password`) VALUES ('$email','$password');";
         $_SESSION["Uname"]=$fname;
 
-        if ($con->query($sql)===true&&$con->query($sql2)===true)
+        if ($conn->query($sql)===true&&$conn->query($sql2)===true)
         {
         echo "Successfully added user $fname";
         }
 
         else
         {
-        echo "ERROR".mysqli_error($con);
+        echo "ERROR".mysqli_error($conn);
         }
     }
     else
@@ -68,7 +68,7 @@ else
         
 
         $sql2 = "INSERT INTO vendor_details (`First_Name`,`Last_Name`,`Phone`) VALUES ('$fname','$lname','$phone')";
-        
+        $_SESSION["Vuname"]=$fname;
         // $sql1 = "SELECT vendor_id FROM vendor_details";
         // $result = $con->query($sql);
 
@@ -88,17 +88,17 @@ else
         $sql4 = "INSERT INTO restaurant_details (`Restaurant_Name`) VALUES ('$restaurant_name');";
 
 
-        if ($con->query($sql2)===true&&$con->query($sql3)===true&&$con->query($sql4))
+        if ($conn->query($sql2)===true&&$conn->query($sql3)===true&&$conn->query($sql4))
         {
-        echo "Successfully added user $name";
+        echo "Successfully added user $fname";
         }
 
         else
         {
-        echo "ERROR: ".mysqli_error($con);
+        echo "ERROR: ".mysqli_error($conn);
         }
     }
-$con->close();
+$conn->close();
 }
 
 }

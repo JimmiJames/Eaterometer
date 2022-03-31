@@ -62,9 +62,10 @@ session_start();
                     <br><br>
                     <label>Price</label>
                     &nbsp;
-                    <input type="number" name="price" placeholder="Enter the price" id="vendor_price" value="<?php
+                    <input type="number" name="price" placeholder="Click get price" id="vendor_price" value="<?php
                     //for slot_mgt_price line 82
-                    echo $_SESSION["price_value"]; ?>" /> 
+                    if(isset($_GET['updateprice'])){
+                    echo $_SESSION["price_value"];} ?>" disabled> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <!-- <form action="slot_mgt_price.php" method="get"> -->
                     <input type="submit" value="GET PRICE" name="updateprice" id="updateprice_id" >

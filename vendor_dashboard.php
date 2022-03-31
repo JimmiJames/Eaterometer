@@ -46,7 +46,7 @@
 
         <div id="mode">
         <button id="dark_mode">
-                    Change mode
+                    Dark mode
                 </button>
         </div>
 
@@ -54,13 +54,13 @@
         <div id="fourbtn">
             <div id="btn">
                 <button id="add">
-                    ADD +
+                    ADD
                 </button>
                 <button id="view">
-                    VIEW +
+                    VIEW
                 </button>
                 <button id="update">
-                    UPDATE +
+                    UPDATE
                 </button>
             </div>
 

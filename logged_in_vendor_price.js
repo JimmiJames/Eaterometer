@@ -73,7 +73,7 @@ darkmode.addEventListener("click", function () {
           bookingbox3.style.border = "2px solid white";
      }
      else {
-          vendorstat.style.backgroundColor = "white";
+          vendorstat.style.backgroundColor = "none";
           vendorstat.style.transition = "0.4s";
           vendorstat.style.color = "black";
           bookingbox1.style.border = "2px";
