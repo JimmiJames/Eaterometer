@@ -32,7 +32,7 @@ for (i = 0; i < backbtn.length; i++) {
      backbtn[i].addEventListener("click", function () {
           // vendor three button styles
           
-     window.open("http://localhost/vendor_dashboard.php","_blank");
+     window.open("http://localhost/vendor_dashboard.php","_self");
      })
 }
 // vendor add button event
