@@ -26,22 +26,23 @@
          ?>
 
             <div class="dropdown">
+                <form action="vendor_add_func.php" method="POST">
                 <label for="start">Start time:</label>
-                    <input type="time" id="start" name="start" step="1">
+                    <input type="time" id="start" name="starts" step="1">
+                
                     <br><br>
                     <label for="end">End time:</label>
                     <input type="time" id="end" name="end" step="1">
                 <br><br>
-
                 <label>Price</label>&nbsp;
                 <input type="number" name="price" placeholder="Enter the price" id="">
                 <br><br>
                 <label>Item</label>&nbsp;
                 <input type="text" name="item" placeholder="Enter the item" id="">
                 <br><br>
-                <input type="submit" value="Confirm" name="">
+                <input type="submit" value="Confirm" name="Confirm">
             </div>
-        <!-- </form> -->
+        </form> 
     </div>
 </body>
 

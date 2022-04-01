@@ -1,6 +1,6 @@
 <!-- VENDOR UPDATE FUNCTIONALITY -->
 <?php
-// session_start();
+ //session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,26 +72,31 @@
                         
                     <br><br>
                     <label>Slot Start Time</label>&nbsp;
-                    <select name="slot_time">
+                    <select name = "slot_time_start">
                     <option value="">Select Slot :</option>
                     <?php
-                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    $results2=mysqli_query($conn, "SELECT slot_time_start as slot_time from slot_mgt");
                     //loop
                     foreach ($results2 as $slot){
                     ?>
                     <option value="<?php echo $slot["slot_time"];?>">
-                        <?php echo $slot["slot_time"];?>
+                        <?php echo $slot["slot_time"];
+                        
+                        
+                        ?>
+                        
                     </option>
+                    
                     <?php
                 }
             ?>
                 </select>
 <br><br>
                 <label>Slot End Time</label>&nbsp;
-                    <select name="slot_time">
+                    <select name="slot_time_end">
                     <option value="">Select Slot :</option>
                     <?php
-                    $results2=mysqli_query($conn, "SELECT concat_ws(' - ',slot_time_start,slot_time_end) as slot_time from slot_mgt");
+                    $results2=mysqli_query($conn, "SELECT slot_time_end as slot_time from slot_mgt");
                     //loop
                     foreach ($results2 as $slot){
                     ?>

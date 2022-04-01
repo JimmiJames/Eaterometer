@@ -82,13 +82,16 @@ else
         //     }
         // } 
 
-        $sql3 = "INSERT INTO vendor_login (`Email`,`Password`) VALUES ('$email','$password');";
+         $sql3 = "INSERT INTO vendor_login (`Email`,`Password`) VALUES ('$email','$password');";
         //$_SESSION['Uname']=$name;
         
-        $sql4 = "INSERT INTO restaurant_details (`Restaurant_Name`) VALUES ('$restaurant_name');";
+         $sql4 = "INSERT INTO restaurant_details (`Restaurant_Name`) VALUES ('$restaurant_name');";
 
+        
+        
+       // $sql6 = "INSERT INTO slot_mgt  (`vendor_id`) VALUES ()";
 
-        if ($conn->query($sql2)===true&&$conn->query($sql3)===true&&$conn->query($sql4))
+        if ($conn->query($sql2)===true&&$conn->query($sql3)===true&&$conn->query($sql4)&&$conn->query($sql5)&&$conn->query($sql6))
         {
         echo "Successfully added user $fname";
         }

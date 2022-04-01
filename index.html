@@ -21,7 +21,7 @@
             <li><a href="#contact_us_li">Contact Us</a></li>
             <!-- <li><a href="#eateries">Eateries</a></li> -->
             <li><a class="reg" id="login" href="#">Login</a></li>
-            <li><a class="reg" id="signup" href="#">Sign in</a></li>
+            <li><a class="reg" id="signup" href="#">Sign Up</a></li>
         </ul>
     </nav>
     <section id="home">
@@ -52,12 +52,12 @@
     <div class="contact-section" id="contact_us_li">
         <h1 class="contact_us">Contact Us</h1>
         <div class="border"></div>
-        <form class="contact-form" action="index.html" method="post">
-            <input type="text" class="contact-form-text" placeholder="Your name">
-            <input type="email" class="contact-form-text" placeholder="Your email">
-            <input type="text" class="contact-form-text" placeholder="Your phone">
-            <textarea class="contact-form-text" placeholder="Your message"></textarea>
-            <input type="submit" class="contact-form-btn" value="Send">
+        <form class="contact-form" action="contact_form.php" method="post">
+            <input type="text" class="contact-form-text" name="name" placeholder="Your name">
+            <input type="email" class="contact-form-text" name="email" placeholder="Your email">
+            <input type="text" class="contact-form-text" name="phone" placeholder="Your phone">
+            <textarea class="contact-form-text" name="msg" placeholder="Your message"></textarea>
+            <input type="submit" class="contact-form-btn" name="contact_btn" value="Send">
         </form>
     </div>
 

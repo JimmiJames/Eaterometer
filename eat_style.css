@@ -332,10 +332,10 @@ section p{
     /* box-sizing: border-box; */
     margin: 16px 0;
     border: 0;
-    background: white;
+    background: rgb(0, 0, 0);
     padding: 20px 40px;
     outline: none;
-    color: #ddd;
+    color: rgb(0, 0, 0);
     /* transition: 0.5s; */
   }
   .contact-form-text:focus{
@@ -345,6 +345,7 @@ section p{
   textarea.contact-form-text{
     resize: none;
     height: 120px;
+    color: rgb(0, 0, 0);
   }
   .contact-form-btn{
     float: right;

@@ -42,7 +42,12 @@
 
         <!-- vendor info. -->
         <div id="vendor_detail">
-            <label id="name">Name:&nbsp;Sahil</label>
+            <label id="name">Your Name:&nbsp;Sahil</label>
+            <!-- <label id="name">Restaurant Name:&nbsp;North County</label><br></br>
+            <label id="name">Restaurant ID:&nbsp;#01</label><br></br>
+            <label id="name">Restaurant Location:&nbsp;Ghaziabad</label> -->
+
+            
         </div>
 
         <!-- booked info -->

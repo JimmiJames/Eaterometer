@@ -31,8 +31,12 @@ var i;
 for (i = 0; i < backbtn.length; i++) {
      backbtn[i].addEventListener("click", function () {
           // vendor three button styles
+<<<<<<< Updated upstream
           
      window.open("http://localhost/vendor_dashboard.php","_self");
+=======
+     window.open("http://localhost:8888/DBMS/eaterometer/vendor_dashboard.php","_self");
+>>>>>>> Stashed changes
      })
 }
 // vendor add button event
