@@ -46,7 +46,7 @@ if (isset($_POST['Email']) && isset($_POST['Password']) && isset($_POST['2']))
           {
             $row = mysqli_fetch_assoc($result);
 
-            if ($row['Email'] === $email && $row['Password'] === $password && $role === "vendor" ) 
+            if ($row['Password'] === $password && $role === "vendor" ) 
             {
                 header ('location:vendor_dashboard.php');
                 
