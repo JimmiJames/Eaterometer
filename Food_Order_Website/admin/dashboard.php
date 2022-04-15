@@ -20,7 +20,7 @@ else
     <meta name="author" content="">
     <!-- Favicon icon -->
   
-    <title>Foodie Dashboard</title>
+    <title>Eaterometer Vendor Dashboard</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -44,7 +44,7 @@ else
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon -->
-                        <a class="navbar-brand logo"> Foodie<span>..</span> </a>
+                        <a class="navbar-brand logo"> Eaterometer<span>..</span> </a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -254,7 +254,7 @@ else
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->
-            <footer class="footer">     &copy; Copyright 2022 - IsraTech </footer>
+            <footer class="footer">     &copy; Copyright 2022 - Eaterometer </footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->

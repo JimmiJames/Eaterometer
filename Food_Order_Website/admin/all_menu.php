@@ -42,7 +42,7 @@ session_start();
                 <!-- Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -128,7 +128,7 @@ session_start();
                         </li>
                       <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
                             <ul aria-expanded="false" class="collapse">
-								<li><a href="all_menu.php">All Menues</a></li>
+								<li><a href="all_menu.php">All Menus</a></li>
 								<li><a href="add_menu.php">Add Menu</a></li>
                               
                                 
@@ -182,11 +182,12 @@ session_start();
                                                 <th>Slogan</th>
                                                 <th>Price</th>
                                                 <th>Image</th>
+                                                <th>status</th>
                                                <th>Action</th>
 												  
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
 											 <th>Restaurant</th>
                                                 <th>Dish-Name</th>
@@ -195,7 +196,7 @@ session_start();
                                                 <th>Image</th>
                                                <th>Action</th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
 										
                                            
@@ -210,29 +211,46 @@ session_start();
 													else
 														{				
 																	while($rows=mysqli_fetch_array($query))
+                                                                    
 																		{
 																				$mql="select * from restaurant where rs_id='".$rows['rs_id']."'";
 																				$newquery=mysqli_query($db,$mql);
 																				$fetch=mysqli_fetch_array($newquery);
+																				?>
 																				
-																				
-																					echo '<tr><td>'.$fetch['title'].'</td>
+																					 <tr><td><?php echo $fetch['title'] ?></td>
 																					
-																								<td>'.$rows['title'].'</td>
-																								<td>'.$rows['slogan'].'</td>
-																								<td>$'.$rows['price'].'</td>
+																								<td> <?php echo $rows['title'];?> </td>
+																								<td><?php echo $rows['slogan']; ?></td>
+																								<td> <?php echo "$".$rows['price'];?></td>
 																								
 																								
 																								<td><div class="col-md-3 col-lg-8 m-b-10">
-																								<center><img src="Res_img/dishes/'.$rows['img'].'" class="img-responsive  radius" style="max-height:100px;max-width:150px;" /></center>
+																								<center><img src="Res_img/dishes/<?php echo $rows['img']; ?>" class="img-responsive  radius" style="max-height:100px;max-width:150px;" /></center>
 																								</div></td>
 																								
-																							
-																									 <td><a href="delete_menu.php?menu_del='.$rows['d_id'].'" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a> 
+                                                                                                <td>
+                                                                                                    <?php 
+                                                                                                    if($rows['status']==0){
+                                                                                                        echo '<p><a href="status.php?d_id='.$rows['d_id'].'&status=1">enable</a></p>';
+                                                                                                    }
+                                                                                                else{
+                                                                                                    echo '<p><a href="status.php?d_id='.$rows['d_id'].'&status=0">disable</a></p>';
+                                                                                                }
+                                                                                                
+                                                                                                ?>
+                                                                                                
+                                                                                                </td>
+																							 
+																									 <td>
+                                                                                                    
+                                                                                                     <button id="disbtn" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></button>
+                                                                                                     
+                                                                                                     <a href="delete_menu.php?menu_del='.$rows['d_id'].'" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a> 
 																									 <a href="update_menu.php?menu_upd='.$rows['d_id'].'" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="background: rgb(0, 188, 126);"><i class="ti-settings" ></i></a>
-																									</td></tr>';
+																									</td></tr>
 																					 
-																						
+																					<?php	
 																						
 																		}	
 														}
@@ -277,7 +295,7 @@ session_start();
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->
-            <footer class="footer">    &copy; Copyright 2022 - IsraTech </footer>
+            <footer class="footer">    &copy; Copyright 2022 - Eaterometer </footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->
@@ -307,6 +325,7 @@ session_start();
     <script src="js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
     <script src="js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
     <script src="js/lib/datatables/datatables-init.js"></script>
+    <script src="js/orderdisable.js"></script>
 </body>
 
 </html>

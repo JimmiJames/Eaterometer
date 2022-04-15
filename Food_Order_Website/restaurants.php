@@ -13,7 +13,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Foodie Restaurant</title>
+    <title>Eaterometer Restaurant</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@ session_start();
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -177,7 +177,7 @@ session_start();
             </section>
             
                     <!-- Featured restaurants ends -->
-                        <section class="app-section">
+                        <!-- <section class="app-section">
                             <div class="app-wrap">
                                 <div class="container">
                                     <div class="row text-img-block text-xs-left">
@@ -203,7 +203,7 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </section> -->
 
 
 
@@ -213,7 +213,7 @@ session_start();
                         <div class="footerIntro">
                             <div class="footerLogoDiv">
                                 <span class="hotelName">
-                                    Foodie<span>..</span>
+                                Eaterometer<span>..</span>
                                 </span>
                             </div>
                             <p>We are a trusted company in unity to provide quality service and food solution to the world around us.</p>
@@ -279,7 +279,7 @@ session_start();
 
                     </div>
                     <div class="copyrightDiv">
-                    &copy; Copyright 2022 - IsraTech
+                    &copy; Copyright 2022 - Eaterometer
                     </div>
                 </section>
     

@@ -127,7 +127,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                 <!-- Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     </a>
                 </div>
                 <!-- End Logo -->

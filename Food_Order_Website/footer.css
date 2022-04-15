@@ -2,10 +2,10 @@
   background: rgb(56, 70, 65);
 }
 .hoverBorder{
-  border: 1px solid rgb(0, 188, 126);
+  border: 1px solid #e54750;
 }
 .bgGreen {
-  background: rgb(0, 188, 126);
+  background: #e54750;
   padding: 10px 15px;
   border-radius: 3rem;
 }
@@ -19,7 +19,7 @@
 }
 .navbar-brand span {
   font-size: 1.2rem;
-  color: rgb(0, 188, 126);
+  color: #e54750;
 }
 
 .input {
@@ -28,7 +28,7 @@
   outline: none;
 }
 .greenBg{
-  background: rgb(0, 188, 126);
+  background: #e54750;
 }
 .input.btn {
   border-radius: 3rem;
@@ -36,7 +36,7 @@
   font-weight: 500;
   border: none;
   outline: none;
-  background:rgb(0, 188, 126) ;
+  background:#e54750;
   padding: 15px 20px;
   color: white;
   margin-left: 10px;
@@ -50,15 +50,15 @@
   border-radius: 3rem;
   font-size: 15px;
   font-weight: 500;
-  border: 1px solid rgb(0, 188, 126) ;;
+  border: 1px solid #e54750;
   outline: none;
   background:none;
   padding: 10px 25px;
-  color: rgb(0, 188, 126) ;
+  color: #e54750;
   
 }
 .ctaBtn:hover {
-  background:rgb(0, 188, 126) ;
+  background:#e54750;
   color: white;
  
 }
@@ -142,10 +142,10 @@
 .sectionData .leftImg::before,
 .rightImgs div::before {
   position: absolute;
-  content: "Foodie..";
+  content: "Eaterometer..";
   height: 0%;
   width: 90%;
-  background: rgba(0, 188, 125, 0.712);
+  background: #e54750;
   color: white;
   justify-self: center;
   -ms-flex-item-align: center;
@@ -183,7 +183,7 @@
   content: "NEW";
   height: 10px;
   width: 80px;
-  background: rgb(0, 188, 126) ;
+  background: #e54750;
   color: white;
   top: 5%;
   left: 5%;
@@ -229,7 +229,7 @@
   font-weight: bold;
 }
 .footerSection .contentContainer .footerIntro .footerLogoDiv .hotelName span {
-  color: rgb(0, 188, 126);
+  color: #e54750;
   font-size: 2rem;
 }
 
@@ -271,7 +271,7 @@ h5 {
 .footerSection .contentContainer .footersectionTitle {
   color: white;
   font-weight: 600;
-  border-left: 2px solid rgb(0, 188, 126);
+  border-left: 2px solid #e54750;
   padding: 0 10px;
   -webkit-transform: translateX(-6px);
   transform: translateX(-6px);
@@ -289,7 +289,7 @@ h5 {
 }
 
 .footerSection .contentContainer .linksDiv li a:hover {
-  color: rgb(0, 188, 126);
+  color: #e54750;
 }
 
 .footerSection .contentContainer .linksDiv ul {
@@ -304,7 +304,7 @@ h5 {
   padding: 5px 0;
 }
 .footerSection .contentContainer .linksDiv ul span:hover {
-  color: rgb(0, 188, 126);
+  color: #e54750;
 }
 
 .footerSection .contentContainer .linksDiv label {
@@ -331,7 +331,7 @@ h5 {
   padding: 8px 5px;
   border: none;
   outline: none;
-  background: rgb(0, 188, 126);
+  background: #e54750;
   color: whitesmoke;
 }
 
@@ -350,7 +350,7 @@ h5 {
 }
 
 .footerSection .copyrightDiv span {
-  color: rgb(0, 188, 126);
+  color: #e54750;
 }
 
 @media screen and (min-width: 576px) {

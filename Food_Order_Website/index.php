@@ -6,6 +6,14 @@ error_reporting(0);  // using to hide undefine undex errors
 session_start(); //start temp session until logout/browser closed
 
 ?>
+<?php
+
+$sql = "SELECT status FROM dishes";
+$qstat=mysqli_query($db,$sql);
+while($rows=mysqli_fetch_array($qstat))                                                                    
+{
+ ?>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +22,7 @@ session_start(); //start temp session until logout/browser closed
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Foodie Restauarants</title>
+    <title>Eaterometer</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -33,7 +41,7 @@ session_start(); //start temp session until logout/browser closed
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -67,7 +75,7 @@ session_start(); //start temp session until logout/browser closed
         <section class="hero bg-image" data-image-src="images/img/main.jpg">
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
-                    <h1>Food Order Website </h1>
+                    <h1>Eaterometer </h1>
                     <h5 class="font-white space-xs">Top restaurants and specials in town</h5>
                     <div class="banner-form">
                         <form class="form-inline">
@@ -114,7 +122,11 @@ session_start(); //start temp session until logout/browser closed
 															<div class="content">
 																<h5><a href="dishes.php?res_id='.$r['rs_id'].'">'.$r['title'].'</a></h5>
 																<div class="product-name">'.$r['slogan'].'</div>
-																<div class="price-btn-block"> <span class="price">$'.$r['price'].'</span> <a href="dishes.php?res_id='.$r['rs_id'].'" class="btn ctaBtn  pull-right">Order Now</a> </div>
+																<div class="price-btn-block"> 
+                                                                <span class="price">&#8377;'.$r['price'].'</span> 
+                                                                <p id="uselessp" style="position:absolute;">'.$rows['status'].'</p>
+                                                                <a id="order_now" href="dishes.php?res_id='.$r['rs_id'].'" class="btn ctaBtn  pull-right">Order Now</a> 
+                                                                </div>
 															</div>
 															
 														</div>
@@ -124,7 +136,9 @@ session_start(); //start temp session until logout/browser closed
 						
 						
 						?>
-				
+				<?php
+}
+                ?>
                 </div>
             </div>
         </section>
@@ -221,7 +235,7 @@ session_start(); //start temp session until logout/browser closed
 																<div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
 																	<h5><a href="dishes.php?res_id='.$rows['rs_id'].'" >'.$rows['title'].'</a></h5> <span>'.$rows['address'].'</span>
 																	<div class="bottom-part">
-																		<div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
+																		<div class="cost"><i class="fa fa-check"></i> Min &#8377; 10,00</div>
 																		<div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
 																		<div class="ratings"> <span>
 																				<i class="fa fa-star"></i>
@@ -253,7 +267,7 @@ session_start(); //start temp session until logout/browser closed
             </div>
         </section>
         <!-- Featured restaurants ends -->
-        <section class="app-section">
+        <!-- <section class="app-section">
             <div class="app-wrap">
                 <div class="container">
                     <div class="row text-img-block text-xs-left">
@@ -279,7 +293,7 @@ session_start(); //start temp session until logout/browser closed
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
 
@@ -289,7 +303,7 @@ session_start(); //start temp session until logout/browser closed
         <div class="footerIntro">
             <div class="footerLogoDiv">
                 <span class="hotelName">
-                    Foodie<span>..</span>
+                    Eaterometer<span>..</span>
                 </span>
             </div>
             <p>We are a trusted company in unity to provide quality service and food solution to the world around us.</p>
@@ -355,7 +369,7 @@ session_start(); //start temp session until logout/browser closed
 
     </div>
     <div class="copyrightDiv">
-       &copy; Copyright 2022 - IsraTech
+       &copy; Copyright 2022 - Eaterometer
     </div>
 </section>
     
@@ -370,6 +384,25 @@ session_start(); //start temp session until logout/browser closed
     <script src="js/headroom.js"></script>
     <script src="js/foodpicky.min.js"></script>
     <script src="js/isratech.js"></script>
+
+    <script>
+
+        let orderbtn = window.document.getElementById("order_now");
+        let para = window.document.getElementById("uselessp");
+
+        
+
+        if(para.innerHTML==0)
+        {
+            orderbtn.style.opacity="0.4";
+            orderbtn.style.pointerEvents="none";
+        }
+
+        // else{
+        //     orderbtn.style.opacity="1";
+        //     orderbtn.style.pointerEvents:"fill";
+        // }
+    </script>
 
 </body>
 

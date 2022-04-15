@@ -133,7 +133,7 @@ else{
 											   
                                                     <tr>
                                                         <td>Cart Subtotal</td>
-                                                        <td> <?php echo "$".$item_total; ?></td>
+                                                        <td> <?php echo "&#8377;".$item_total; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Shipping &amp; Handling</td>
@@ -141,7 +141,7 @@ else{
                                                     </tr>
                                                     <tr>
                                                         <td class="text-color"><strong>Total</strong></td>
-                                                        <td class="text-color"><strong> <?php echo "$".$item_total; ?></strong></td>
+                                                        <td class="text-color"><strong> <?php echo "&#8377;".$item_total; ?></strong></td>
                                                     </tr>
                                                 </tbody>
 												
@@ -177,7 +177,7 @@ else{
 
             
                     <!-- Featured restaurants ends -->
-        <section class="app-section">
+        <!-- <section class="app-section">
             <div class="app-wrap">
                 <div class="container">
                     <div class="row text-img-block text-xs-left">
@@ -203,7 +203,7 @@ else{
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
 
@@ -279,7 +279,7 @@ else{
 
     </div>
     <div class="copyrightDiv">
-       &copy; Copyright 2022 - IsraTech
+       &copy; Copyright 2022 - Eaterometer
     </div>
 </section>
         </div>

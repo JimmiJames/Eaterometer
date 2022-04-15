@@ -94,7 +94,7 @@ if(isset($_POST['submit1'] ))
 
 <head>
   <meta charset="UTF-8">
-  <title>Foodie Dashboard Login</title>
+  <title>Eaterometer Vendor Dashboard Login</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -141,9 +141,6 @@ if(isset($_POST['submit1'] ))
 
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src='js/index.js'></script>
-  
-
-    
 
 
 

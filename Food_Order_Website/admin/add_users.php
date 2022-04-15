@@ -74,7 +74,7 @@ if(isset($_POST['submit'] ))
 	mysqli_query($db, $mql);
 			$success = 	'<div class="alert alert-success alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																<strong>Congrass!</strong> New User Added Successfully.</br></div>';
+																<strong>Congrats!</strong> New User Added Successfully.</br></div>';
 	
     }
 	}
@@ -118,7 +118,7 @@ if(isset($_POST['submit'] ))
                 <!-- Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -352,7 +352,7 @@ if(isset($_POST['submit'] ))
             </div>
             <!-- End Container fluid  -->
             <!-- footer -->
-            <footer class="footer">   &copy; Copyright 2022 - IsraTech</footer>
+            <footer class="footer">   &copy; Copyright 2022 - Eaterometer</footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->

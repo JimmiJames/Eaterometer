@@ -64,7 +64,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
 			  
 													$success = 	'<div class="alert alert-success alert-dismissible fade show">
 																<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-																<strong>Congrass!</strong> New Restaurant Added Successfully.
+																<strong>Congrats!</strong> New Restaurant Added Successfully.
 															</div>';
                 
 	
@@ -142,7 +142,7 @@ if(isset($_POST['submit']))           //if upload btn is pressed
                 <!-- Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     </a>
                 </div>
                 <!-- End Logo -->

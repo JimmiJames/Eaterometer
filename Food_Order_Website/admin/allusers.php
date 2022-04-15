@@ -41,7 +41,7 @@ session_start();
                 <!-- Logo -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -240,7 +240,7 @@ session_start();
 			
 			
             <!-- footer -->
-            <footer class="footer">    &copy; Copyright 2022 - IsraTech</footer>
+            <footer class="footer">    &copy; Copyright 2022 - Eaterometer</footer>
             <!-- End footer -->
         </div>
         <!-- End Page wrapper  -->

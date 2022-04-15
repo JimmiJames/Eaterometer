@@ -37,7 +37,7 @@ include_once 'product-action.php'; //including controller
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.php"> Foodie<span>..</span> </a>
+                    <a class="navbar-brand" href="index.php"> Eaterometer<span>..</span> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                        <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -412,7 +412,7 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
 
                 </div>
                 <div class="copyrightDiv">
-                &copy; Copyright 2022 - IsraTech
+                &copy; Copyright 2022 - Eaterometer
                 </div>
             </section>
         </div>
