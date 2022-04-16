@@ -206,6 +206,12 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                             </div>
                             <div class="collapse in" id="popular2">
 						<?php  // display values and item of food/dishes
+                        $sql = "SELECT status FROM dishes";
+                        $qstat=mysqli_query($db,$sql);
+                        while($rows=mysqli_fetch_array($qstat))                                                                    
+                        {
+                           echo '<p class="uselessp" style="position:absolute; visibility:hidden;">'.$rows['status'].'</p>';
+                        }
 									$stmt = $db->prepare("select * from dishes where rs_id='$_GET[res_id]'");
 									$stmt->execute();
 									$products = $stmt->get_result();
@@ -563,6 +569,25 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/headroom.js"></script>
     <script src="js/foodpicky.min.js"></script>
+
+    <script>
+
+let orderbtn = window.document.getElementsByClassName("btn theme-btn ctaBtn");
+let para = window.document.getElementsByClassName("uselessp");
+// let dishbox = window.document.getElementsByClassName("price-btn-block");
+
+var i;
+for(i=0;i<orderbtn.length;i++)
+{
+    if(para[i].innerHTML==0)
+    {
+    orderbtn[i].style.opacity="0.4";
+    orderbtn[i].style.pointerEvents="none";
+    // dishbox[i].style.cursor="not-allowed";
+    }
+}
+
+</script>
 </body>
 
 </html>
