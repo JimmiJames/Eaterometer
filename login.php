@@ -1,94 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Login</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=poppins:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/login.css">
+      <link rel="stylesheet" href="footer.css">
+  
+</head>
+
+<body>
 <?php
-  require("universalconnection.php");
-  session_start();
-?>
-
-<?php 
-
-// include "db_conn.php";
-
-if (isset($_POST['Email']) && isset($_POST['Password']) && isset($_POST['2'])) 
-{   
-    function validate($data)
-    {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-
-        $email = validate($_POST['Email']);
-        $password = validate($_POST['Password']);
-        $role = validate($_POST['2']);
-
-        if (empty($email)) 
-        {
-          echo "User Name is required";
-          exit();
-        }
-    
-        else if(empty($password))
-        {
-          echo"error=Password is required";
-          exit();
-        }
-
-        else
-        {
-          $sql = "SELECT * FROM customer_login WHERE Email='$email' AND Password ='$password'";
-          $result = mysqli_query($conn, $sql);
-
-          $sql2 = "SELECT * FROM vendor_login WHERE Email='$email' AND Password ='$password'";
-          $result2 = mysqli_query($conn, $sql2);
-          // $_SESSION['Email']=$email;
-
-          if (mysqli_num_rows($result) === 1) 
-          {
-            $row = mysqli_fetch_assoc($result);
-
-            if ($row['Password'] === $password && $role === "vendor" ) 
-            {
-                header ('location:vendor_dashboard.php');
-                
-                exit();
-            }
-            
-            
-            else
-            {
-                echo"error=Incorect User name or password in vendor";
-                exit();
-            }
-
-        }
-       // echo"error=Incorect User name or password in customer 1";
-        if (mysqli_num_rows($result2) === 1) 
-          {
-            $row = mysqli_fetch_assoc($result2);
-
-            if ($row['Email'] === $email && $row['Password'] === $password && $role === "customer" ) 
-            {
-                echo "customer";
-                header ('location:vendor_dashboard.php');
-                exit();
-            }
-            
-            
-            else
-            {
-                echo"error=Incorect User name or password in customer 2";
-                exit();
-            }
-
-        }
-    }
-}
-
-
-else
+include("connection/connect.php"); //INCLUDE CONNECTION
+error_reporting(0); // hide undefine index errors
+session_start(); // temp sessions
+if(isset($_POST['submit']))   // if button is submit
 {
-    exit();
+	$username = $_POST['username'];  //fetch records from login form
+	$password = $_POST['password'];
+	
+	if(!empty($_POST["submit"]))   // if records were not empty
+     {
+	$loginquery ="SELECT * FROM users WHERE username='$username' && password='".md5($password)."'"; //selecting matching records
+	$result=mysqli_query($db, $loginquery); //executing
+	$row=mysqli_fetch_array($result);
+	
+	                        if(is_array($row))  // if matching records in the array & if everything is right
+								{
+                                    	$_SESSION["user_id"] = $row['u_id']; // put user id into temp session
+										 header("refresh:1;url=index.php"); // redirect to index.php page
+	                            } 
+							else
+							    {
+                                      	$message = "Invalid Username or Password!"; // throw error
+                                }
+	 }
+	
+	
 }
-
 ?>
+  
+<!-- Form Mixin-->
+<!-- Input Mixin-->
+<!-- Button Mixin-->
+<!-- Pen Title-->
+<div class="pen-title">
+  <h1>Login Form</h1>
+</div>
+<!-- Form Module-->
+<div class="module form-module">
+  <div class="toggle">
+   
+  </div>
+  <div class="form">
+    <h2>Login to your account</h2>
+	  <span style="color:red;"><?php echo $message; ?></span> 
+   <span style="color:green;"><?php echo $success; ?></span>
+    <form action="" method="post">
+      <input class="input" type="text" placeholder="Username"  name="username"/>
+      <input class="input" type="password" placeholder="Password" name="password"/>
+      <input class="input greenBg" type="submit"  name="submit" value="Login" />
+    </form>
+  </div> 
+  
+  <div class="cta">Not registered?<a href="registration.php" style="color:#f30;"> Create an account</a></div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+  
+
+   
+
+
+
+</body>
+
+</html>
